@@ -219,7 +219,7 @@ type EventRecords struct {
 // a custom event record with a wrong type. For example your custom event record has a field with a length prefixed
 // type, such as types.Bytes, where your event in reallity contains a fixed width type, such as a types.U32.
 func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error {
-	log.Debug(fmt.Sprintf("will decode event records from raw hex: %#x", e))
+	log.Info(fmt.Sprintf("will decode event records from raw hex: %#x", e))
 
 	// ensure t is a pointer
 	ttyp := reflect.TypeOf(t)
@@ -250,11 +250,11 @@ func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error {
 		return err
 	}
 
-	log.Debug(fmt.Sprintf("found %v events", n))
+	log.Info(fmt.Sprintf("found %v events", n))
 
 	// iterate over events
 	for i := uint64(0); i < n.Uint64(); i++ {
-		log.Debug(fmt.Sprintf("decoding event #%v", i))
+		log.Info(fmt.Sprintf("decoding event #%v", i))
 
 		// decode Phase
 		phase := Phase{}
@@ -270,7 +270,7 @@ func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error {
 			return fmt.Errorf("unable to decode EventID for event #%v: %v", i, err)
 		}
 
-		log.Debug(fmt.Sprintf("event #%v has EventID %v", i, id))
+		log.Info(fmt.Sprintf("event #%v has EventID %v", i, id))
 
 		// ask metadata for method & event name for event
 		moduleName, eventName, err := m.FindEventNamesForEventID(id)
@@ -279,7 +279,7 @@ func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error {
 			return fmt.Errorf("unable to find event with EventID %v in metadata for event #%v: %s", id, i, err)
 		}
 
-		log.Debug(fmt.Sprintf("event #%v is in module %v with event name %v", i, moduleName, eventName))
+		log.Info(fmt.Sprintf("event #%v is in module %v with event name %v", i, moduleName, eventName))
 
 		// check whether name for eventID exists in t
 		field := val.FieldByName(fmt.Sprintf("%v_%v", moduleName, eventName))
@@ -322,7 +322,7 @@ func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error {
 		// add the decoded event to the slice
 		field.Set(reflect.Append(field, holder.Elem()))
 
-		log.Debug(fmt.Sprintf("decoded event #%v", i))
+		log.Info(fmt.Sprintf("decoded event #%v", i))
 	}
 	return nil
 }
