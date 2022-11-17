@@ -21,6 +21,7 @@ type AccountInfo struct {
 	Nonce     U32
 	Consumers U32
 	Providers U32
+	Sufficients U32
 	Data      struct {
 		Free       U128
 		Reserved   U128
