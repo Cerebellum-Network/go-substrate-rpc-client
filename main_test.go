@@ -21,11 +21,11 @@ import (
 	"math/big"
 	"time"
 
-	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v4"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/config"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/signature"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v4"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types/codec"
 )
 
 func Example_simpleConnect() {
