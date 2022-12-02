@@ -3,7 +3,7 @@ package types
 import (
 	"encoding/json"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types/codec"
 )
 
 // GenerateMMRProofResponse contains the generate proof rpc response
