@@ -334,6 +334,7 @@ type EventRecords struct {
 	Staking_Slashed                    []EventStakingSlashed                    `test-gen-blockchain:"polkadot"`
 	Staking_StakersElected             []EventStakingStakersElected             `test-gen-blockchain:"polkadot"`
 	Staking_StakingElectionFailed      []EventStakingStakingElectionFailed      `test-gen-blockchain:"polkadot"`
+	Staking_ValidatorPrefsSet          []EventStakingValidatorPrefsSet          `test-gen-blockchain:"polkadot"`
 	Staking_Unbonded                   []EventStakingUnbonded                   `test-gen-blockchain:"polkadot"`
 	Staking_Withdrawn                  []EventStakingWithdrawn                  `test-gen-blockchain:"polkadot"`
 
@@ -563,6 +564,11 @@ func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error { 
 		log.Debug(fmt.Sprintf("decoded event #%v", i))
 	}
 	return nil
+}
+
+type ValidatorPrefs struct {
+	Commission U128
+	Blocked    bool
 }
 
 // Phase is an enum describing the current phase of the event (applying the extrinsic or finalized)
