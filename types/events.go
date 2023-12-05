@@ -1289,7 +1289,7 @@ type EventElectionProviderMultiPhaseSolutionStored struct {
 // with `Some` of the given computation, or else if the election failed, `None`.
 type EventElectionProviderMultiPhaseElectionFinalized struct {
 	Phase           Phase
-	ElectionCompute OptionElectionCompute
+	ElectionCompute ElectionCompute
 	Topics          []Hash
 }
 
