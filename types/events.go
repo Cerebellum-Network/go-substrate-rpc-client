@@ -565,6 +565,14 @@ type EventStakingUnbonded struct {
 	Topics []Hash
 }
 
+// EventStakingUnbonded is emitted when an account has unbonded this amount
+type EventStakingValidatorPrefsSet struct {
+	Phase  Phase
+	Stash  AccountID
+	Prefs  ValidatorPrefs
+	Topics []Hash
+}
+
 // EventStakingWithdrawn is emitted when an account has called `withdraw_unbonded` and removed unbonding chunks
 // worth `Balance` from the unlocking queue.
 type EventStakingWithdrawn struct {
@@ -1281,7 +1289,7 @@ type EventElectionProviderMultiPhaseSolutionStored struct {
 // with `Some` of the given computation, or else if the election failed, `None`.
 type EventElectionProviderMultiPhaseElectionFinalized struct {
 	Phase           Phase
-	ElectionCompute OptionElectionCompute
+	ElectionCompute ElectionCompute
 	Topics          []Hash
 }
 

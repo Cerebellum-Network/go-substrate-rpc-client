@@ -66,6 +66,21 @@ func NewElectionCompute(b byte) ElectionCompute {
 	return ElectionCompute(b)
 }
 
+type ElectionScore struct {
+	// The minimal winner, in terms of total backing stake.
+	//
+	// This parameter should be maximized.
+	MinimalStake U128
+	// The sum of the total backing of all winners.
+	//
+	// This parameter should maximized
+	SumStake U128
+	// The sum squared of the total backing of all winners, aka. the variance.
+	//
+	// Ths parameter should be minimized.
+	SumStakeSquared U128
+}
+
 const (
 	// OnChain means that the result was forcefully computed on chain at the end of the session.
 	OnChain ElectionCompute = 0
