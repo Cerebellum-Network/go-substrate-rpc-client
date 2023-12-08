@@ -1,4 +1,4 @@
-module github.com/Cerebellum-Network/go-substrate-rpc-client/v4
+module github.com/Cerebellum-Network/go-substrate-rpc-client/v5
 
 go 1.18
 
