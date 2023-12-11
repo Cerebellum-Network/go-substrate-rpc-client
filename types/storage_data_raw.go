@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 )
 
 // StorageDataRaw contains raw bytes that are not decoded/encoded.

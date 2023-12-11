@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 
 // OptionH160 is a structure that can store a H160 or a missing value
 type OptionH160 struct {

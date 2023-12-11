@@ -22,7 +22,7 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
 )
 
 func main() { //nolint: funlen

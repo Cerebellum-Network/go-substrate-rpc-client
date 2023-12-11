@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 
 // PostDispatchInfo is used in DispatchResultWithPostInfo.
 // Weight information that is only available post dispatch.

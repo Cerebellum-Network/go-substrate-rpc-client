@@ -19,7 +19,7 @@ package types
 import (
 	"math/big"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 )
 
 type UCompact big.Int

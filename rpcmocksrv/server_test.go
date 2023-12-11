@@ -19,7 +19,7 @@ package rpcmocksrv
 import (
 	"testing"
 
-	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/gethrpc"
+	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/gethrpc"
 	"github.com/stretchr/testify/assert"
 )
 

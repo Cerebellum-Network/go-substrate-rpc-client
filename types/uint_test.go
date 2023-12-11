@@ -21,10 +21,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types/codec"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types/test_utils"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/test_utils"
 	"github.com/stretchr/testify/assert"
 )
 

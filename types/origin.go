@@ -17,7 +17,7 @@
 package types
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 )
 
 // Origin is an internal-only value that will be ignored when encoding/decoding

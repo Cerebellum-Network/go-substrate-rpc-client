@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/rpc/author"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/author"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
 	"github.com/stretchr/testify/assert"
 )
 
