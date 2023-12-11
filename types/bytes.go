@@ -19,7 +19,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
 )
 
 // Bytes represents byte slices. Bytes has a variable length, it is encoded with a scale prefix

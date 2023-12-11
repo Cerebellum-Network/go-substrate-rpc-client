@@ -19,10 +19,10 @@ package teste2e
 import (
 	"testing"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v5"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/config"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v6"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -20,9 +20,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/test_utils"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/test_utils"
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"
 )

@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
 )
 
 type RuntimeVersion struct {

@@ -17,7 +17,7 @@
 package system
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
 )
 
 // Name retrieves the node name

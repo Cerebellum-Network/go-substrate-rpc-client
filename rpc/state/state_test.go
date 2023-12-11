@@ -21,10 +21,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpcmocksrv"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpcmocksrv"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
 )
 
 var testState State

@@ -19,9 +19,9 @@ package types
 import (
 	"fmt"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
 )
 
 // ExtrinsicPayloadV3 is a signing payload for an Extrinsic. For the final encoding, it is variable length based on

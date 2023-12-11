@@ -17,9 +17,9 @@
 package state
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
 )
 
 // GetKeys retreives the keys with the given prefix

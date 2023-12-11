@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
 )
 
 // MyVal is a custom type that is used to hold arbitrarily encoded data. In this example, we encode uint8s with a 0x00

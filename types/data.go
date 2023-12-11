@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
 )
 
 // Data is a raw data structure, containing raw bytes that are not decoded/encoded (without any length encoding).

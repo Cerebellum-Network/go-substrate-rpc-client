@@ -17,8 +17,8 @@
 package chain
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
 )
 
 // GetBlock returns the header and body of the relay chain block with the given hash

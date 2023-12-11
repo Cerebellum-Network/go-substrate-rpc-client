@@ -17,15 +17,15 @@
 package rpc
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/author"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/beefy"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/chain"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/mmr"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/offchain"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/state"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/system"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/author"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/beefy"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/chain"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/mmr"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/offchain"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/state"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/system"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
 )
 
 type RPC struct {
