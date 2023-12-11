@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 )
 
 // U8 is an unsigned 8-bit integer

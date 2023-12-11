@@ -1,6 +1,6 @@
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 
 type ProxyDefinition struct {
 	Delegate  AccountID

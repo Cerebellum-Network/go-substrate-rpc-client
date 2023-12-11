@@ -3,8 +3,8 @@
 package mocks
 
 import (
-	offchain "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/rpc/offchain"
-	types "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
+	offchain "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/offchain"
+	types "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

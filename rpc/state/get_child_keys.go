@@ -17,9 +17,9 @@
 package state
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
 )
 
 // GetChildKeys retreives the keys with the given prefix of a specific child storage

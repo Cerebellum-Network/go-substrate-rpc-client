@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/xxhash"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/xxhash"
 )
 
 // StorageKey represents typically hashed storage keys of the system.

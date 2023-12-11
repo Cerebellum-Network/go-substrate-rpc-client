@@ -17,7 +17,7 @@
 package chain
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
 )
 
 // GetBlockHash returns the block hash for a specific block height

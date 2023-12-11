@@ -17,7 +17,7 @@
 package types
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 )
 
 // ChainProperties contains the SS58 format, the token decimals and the token symbol

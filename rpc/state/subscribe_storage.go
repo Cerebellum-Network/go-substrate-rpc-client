@@ -20,9 +20,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/config"
-	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v4/gethrpc"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/config"
+	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/gethrpc"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
 )
 
 // StorageSubscription is a subscription established through one of the Client's subscribe methods.

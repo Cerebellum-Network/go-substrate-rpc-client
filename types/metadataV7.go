@@ -21,7 +21,7 @@ import (
 	"hash"
 	"strings"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
 )
 
 // Modelled after packages/types/src/Metadata/v7/Metadata.ts

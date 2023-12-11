@@ -17,8 +17,8 @@
 package chain
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v4/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
 )
 
 // GetHeader retrieves the header for the specific block
