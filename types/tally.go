@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
 
 type Tally struct {
 	Votes U128

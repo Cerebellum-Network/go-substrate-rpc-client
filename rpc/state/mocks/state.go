@@ -3,8 +3,8 @@
 package mocks
 
 import (
-	state "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc/state"
-	types "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
+	state "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/state"
+	types "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

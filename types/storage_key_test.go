@@ -22,11 +22,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/hash"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/test_utils"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/xxhash"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/hash"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/test_utils"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/xxhash"
 	"github.com/stretchr/testify/assert"
 )
 

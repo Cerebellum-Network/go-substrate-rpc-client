@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"reflect"
 
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v5/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
 )
 
 func ExampleExampleVec_simple() {

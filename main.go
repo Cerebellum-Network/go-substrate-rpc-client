@@ -17,8 +17,8 @@
 package gsrpc
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v5/rpc"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc"
 )
 
 type SubstrateAPI struct {
