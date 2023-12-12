@@ -1290,6 +1290,7 @@ type EventElectionProviderMultiPhaseSolutionStored struct {
 type EventElectionProviderMultiPhaseElectionFinalized struct {
 	Phase           Phase
 	ElectionCompute ElectionCompute
+	ElectionScore   ElectionScore
 	Topics          []Hash
 }
 
