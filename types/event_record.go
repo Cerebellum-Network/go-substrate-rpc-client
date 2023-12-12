@@ -567,7 +567,7 @@ func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error { 
 }
 
 type ValidatorPrefs struct {
-	Commission U128
+	Commission U32
 	Blocked    bool
 }
 
