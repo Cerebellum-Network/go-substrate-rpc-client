@@ -20,9 +20,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/config"
-	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/gethrpc"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
+	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/gethrpc"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 )
 
 // JustificationsSubscription is a subscription established through one of the Client's subscribe methods.
