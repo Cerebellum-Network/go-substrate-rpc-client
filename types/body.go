@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
 
 type BodyID struct {
 	IsUnit bool

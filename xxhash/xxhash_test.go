@@ -19,7 +19,7 @@ package xxhash_test
 import (
 	"testing"
 
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/xxhash"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/xxhash"
 	"github.com/stretchr/testify/assert"
 )
 

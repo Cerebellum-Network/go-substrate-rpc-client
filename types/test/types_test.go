@@ -23,9 +23,9 @@ import (
 	"path"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 )
 
 //go:generate go run ./test-gen test_data meta_bytes storage_bytes

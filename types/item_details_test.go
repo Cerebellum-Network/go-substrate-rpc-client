@@ -20,9 +20,9 @@ import (
 	"math/big"
 	"testing"
 
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/test_utils"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/test_utils"
 	fuzz "github.com/google/gofuzz"
 )
 

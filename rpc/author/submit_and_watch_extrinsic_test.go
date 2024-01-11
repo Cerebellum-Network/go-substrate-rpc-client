@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v6"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/config"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/author"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/author"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 	"github.com/stretchr/testify/assert"
 )
 

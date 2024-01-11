@@ -21,8 +21,8 @@ import (
 	"hash"
 	"strings"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/xxhash"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/xxhash"
 )
 
 const MagicNumber uint32 = 0x6174656d

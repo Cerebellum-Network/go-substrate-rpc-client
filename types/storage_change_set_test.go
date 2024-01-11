@@ -20,8 +20,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
 	"github.com/stretchr/testify/assert"
 )
 

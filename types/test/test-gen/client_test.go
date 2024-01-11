@@ -27,16 +27,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v6"
-	mockClient "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client/mocks"
-	mockChain "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/chain/mocks"
-	mockState "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc/state/mocks"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7"
+	mockClient "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/client/mocks"
+	mockChain "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/chain/mocks"
+	mockState "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/state/mocks"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpc"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpcmocksrv"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpcmocksrv"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 	"github.com/stretchr/testify/assert"
 )
 
