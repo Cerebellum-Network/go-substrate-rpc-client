@@ -19,8 +19,8 @@ package types
 import (
 	"fmt"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
 )
 
 // Address is a wrapper around an AccountId or an AccountIndex. It is encoded with a prefix in case of an AccountID.

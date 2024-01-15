@@ -19,8 +19,8 @@
 package mmr
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 )
 
 // MMR exposes methods for retrieval of MMR data

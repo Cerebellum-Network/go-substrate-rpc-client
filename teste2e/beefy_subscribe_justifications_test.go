@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v6"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/config"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
 	"github.com/stretchr/testify/assert"
 )
 

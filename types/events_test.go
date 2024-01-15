@@ -20,9 +20,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/test_utils"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/test_utils"
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"
 )
@@ -37,7 +37,7 @@ var (
 func TestDispatchInfo_EncodeDecode(t *testing.T) {
 	AssertRoundTripFuzz[DispatchInfo](t, 100, dispatchInfoFuzzOpts...)
 	AssertDecodeNilData[DispatchInfo](t)
-	AssertEncodeEmptyObj[DispatchInfo](t, 8)
+	AssertEncodeEmptyObj[DispatchInfo](t, 2)
 }
 
 func TestVoteThreshold_Decoder(t *testing.T) {

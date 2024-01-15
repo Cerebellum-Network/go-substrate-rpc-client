@@ -21,7 +21,7 @@ import (
 	"strconv"
 	"time"
 
-	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/gethrpc"
+	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/gethrpc"
 )
 
 type Server struct {

@@ -17,8 +17,8 @@
 package types
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
 )
 
 type MultiAddress struct {

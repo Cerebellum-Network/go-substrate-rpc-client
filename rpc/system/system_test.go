@@ -20,11 +20,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/rpcmocksrv"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpcmocksrv"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 )
 
 var testSystem System

@@ -17,7 +17,7 @@
 package types
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
 )
 
 // MigrationCompute is an enum describing how a migration was computed.

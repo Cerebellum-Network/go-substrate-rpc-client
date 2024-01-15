@@ -19,20 +19,20 @@ package types_test
 import (
 	"testing"
 
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/codec"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types/test_utils"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/test_utils"
 	fuzz "github.com/google/gofuzz"
 )
 
 var (
 	testOutcome1 = Outcome{
 		IsComplete:     true,
-		CompleteWeight: 123,
+		CompleteWeight: testWeight,
 	}
 	testOutcome2 = Outcome{
 		IsIncomplete:     true,
-		IncompleteWeight: 54,
+		IncompleteWeight: testWeight,
 		IncompleteError: XCMError{
 			IsOverflow: true,
 		},
@@ -77,16 +77,16 @@ func TestOutcome_EncodeDecode(t *testing.T) {
 
 func TestOutcome_Encode(t *testing.T) {
 	AssertEncode(t, []EncodingAssert{
-		{testOutcome1, MustHexDecodeString("0x007b00000000000000")},
-		{testOutcome2, MustHexDecodeString("0x01360000000000000000")},
+		{testOutcome1, MustHexDecodeString("0x002ce909")},
+		{testOutcome2, MustHexDecodeString("0x012ce90900")},
 		{testOutcome3, MustHexDecodeString("0x0201")},
 	})
 }
 
 func TestOutcome_Decode(t *testing.T) {
 	AssertDecode(t, []DecodingAssert{
-		{MustHexDecodeString("0x007b00000000000000"), testOutcome1},
-		{MustHexDecodeString("0x01360000000000000000"), testOutcome2},
+		{MustHexDecodeString("0x002ce909"), testOutcome1},
+		{MustHexDecodeString("0x012ce90900"), testOutcome2},
 		{MustHexDecodeString("0x0201"), testOutcome3},
 	})
 }

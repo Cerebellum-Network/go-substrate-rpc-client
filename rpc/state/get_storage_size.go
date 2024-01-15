@@ -17,8 +17,8 @@
 package state
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 )
 
 // GetStorageSize retreives the storage size for the given key

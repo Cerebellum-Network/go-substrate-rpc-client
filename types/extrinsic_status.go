@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
 )
 
 // ExtrinsicStatus is an enum containing the result of an extrinsic submission

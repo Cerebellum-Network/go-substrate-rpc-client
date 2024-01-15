@@ -19,7 +19,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
 )
 
 type OptionElectionCompute struct {

@@ -19,7 +19,7 @@ package chain
 import (
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v6/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 	"github.com/stretchr/testify/assert"
 )
 

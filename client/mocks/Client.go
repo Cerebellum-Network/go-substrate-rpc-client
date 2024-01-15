@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	rpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v6/gethrpc"
+	rpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/gethrpc"
 	mock "github.com/stretchr/testify/mock"
 )
 
