@@ -1,9 +1,9 @@
 package state
 
 import (
-	libErr "github.com/centrifuge/go-substrate-rpc-client/v4/error"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc/state"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	libErr "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/error"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/state"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 )
 
 const (

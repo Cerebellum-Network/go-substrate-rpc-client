@@ -16,7 +16,11 @@
 
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+import (
+	"errors"
+
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+)
 
 type Tranche struct {
 	FirstVal  U64

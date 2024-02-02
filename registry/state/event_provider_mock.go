@@ -3,7 +3,7 @@
 package state
 
 import (
-	types "github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	types "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/registry/test"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry/test"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
 	"github.com/stretchr/testify/assert"
 )
 
