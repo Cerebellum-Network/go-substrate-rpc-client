@@ -22,8 +22,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/vedhavyas/go-subkey"
-	"github.com/vedhavyas/go-subkey/sr25519"
+	"github.com/vedhavyas/go-subkey/v2"
+	"github.com/vedhavyas/go-subkey/v2/sr25519"
 	"golang.org/x/crypto/blake2b"
 )
 
@@ -38,17 +38,14 @@ type KeyringPair struct {
 
 // KeyringPairFromSecret creates KeyPair based on seed/phrase and network
 // Leave network empty for default behavior
-func KeyringPairFromSecret(seedOrPhrase string, network uint8) (KeyringPair, error) {
+func KeyringPairFromSecret(seedOrPhrase string, network uint16) (KeyringPair, error) {
 	scheme := sr25519.Scheme{}
 	kyr, err := subkey.DeriveKeyPair(scheme, seedOrPhrase)
 	if err != nil {
 		return KeyringPair{}, err
 	}
 
-	ss58Address, err := kyr.SS58Address(network)
-	if err != nil {
-		return KeyringPair{}, err
-	}
+	ss58Address := kyr.SS58Address(network)
 
 	var pk = kyr.Public()
 
@@ -129,7 +126,7 @@ func LoadKeyringPairFromEnv() (kp KeyringPair, ok bool) {
 	if !ok || priv == "" {
 		return kp, false
 	}
-	kp, err = KeyringPairFromSecret(priv, uint8(network))
+	kp, err = KeyringPairFromSecret(priv, uint16(network))
 	if err != nil {
 		panic(fmt.Errorf("cannot load keyring pair from env or use fallback: %v", err))
 	}
