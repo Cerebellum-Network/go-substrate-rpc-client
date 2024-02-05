@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
 )
 
 // DefaultGenericSignedBlock is the SignedBlock with defaults for the generic types:

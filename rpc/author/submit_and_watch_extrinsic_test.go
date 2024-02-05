@@ -3,11 +3,11 @@ package author_test
 import (
 	"testing"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/author"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/rpc/author"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 	"github.com/stretchr/testify/assert"
 )
 

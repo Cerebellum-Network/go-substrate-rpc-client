@@ -3,8 +3,8 @@
 package retriever
 
 import (
-	parser "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry/parser"
-	types "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	parser "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry/parser"
+	types "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/chain/generic"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/rpc/chain/generic"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 )
 
 // DefaultExtrinsic is the Extrinsic with defaults for the generic types:

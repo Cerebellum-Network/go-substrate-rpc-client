@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
 )
 
 // Modelled after packages/types/src/Metadata/v9/Metadata.ts

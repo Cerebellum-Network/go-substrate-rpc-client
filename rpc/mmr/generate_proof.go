@@ -17,8 +17,8 @@
 package mmr
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 )
 
 // GenerateProof retrieves a MMR proof and leaf for the specified leave index, at the given blockHash (useful to query a

@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
 
 // Modelled after packages/types/src/Metadata/v10/toV11.ts
 type MetadataV11 struct {

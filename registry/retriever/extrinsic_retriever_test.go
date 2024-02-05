@@ -4,12 +4,12 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry/exec"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry/parser"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/chain/generic"
-	stateMocks "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/state/mocks"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry/exec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry/parser"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/rpc/chain/generic"
+	stateMocks "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/rpc/state/mocks"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

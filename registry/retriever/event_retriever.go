@@ -3,12 +3,12 @@ package retriever
 import (
 	"time"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry/exec"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry/parser"
-	regState "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/registry/state"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/state"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry/exec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry/parser"
+	regState "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry/state"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/rpc/state"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 )
 
 //nolint:lll

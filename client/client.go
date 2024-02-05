@@ -19,10 +19,10 @@ package client
 import (
 	"context"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
-	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/gethrpc"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
+	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/gethrpc"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
 )
 
 //go:generate mockery --name Client

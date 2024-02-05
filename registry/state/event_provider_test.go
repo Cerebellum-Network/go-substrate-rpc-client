@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/state/mocks"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/rpc/state/mocks"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
 	"github.com/stretchr/testify/assert"
 )
 

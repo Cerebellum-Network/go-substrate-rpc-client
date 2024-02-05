@@ -1,6 +1,6 @@
 package parser
 
-import libErr "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/error"
+import libErr "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/error"
 
 const (
 	ErrEventsCountDecoding  = libErr.Error("events count decoding")

@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"math/big"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
 )
 
 type UCompact big.Int

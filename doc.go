@@ -56,6 +56,6 @@ methods that implement the Encodeable/Decodeable interfaces. Examples for that a
 types, you can find reference implementations of those here: types/enum_test.go , types/tuple_test.go and
 types/vec_any_test.go
 
-For more information about the types sub-package, see https://godoc.org/github.com/centrifuge/go-substrate-rpc-client/v7/types
+For more information about the types sub-package, see https://godoc.org/github.com/centrifuge/go-substrate-rpc-client/v4/types
 */
 package gsrpc
