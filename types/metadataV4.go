@@ -22,8 +22,8 @@ import (
 	"hash"
 	"strings"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/xxhash"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/xxhash"
 	"golang.org/x/crypto/blake2b"
 )
 

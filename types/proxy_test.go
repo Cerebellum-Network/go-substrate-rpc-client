@@ -4,9 +4,9 @@ import (
 	"math/big"
 	"testing"
 
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/test_utils"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/test_utils"
 )
 
 var (
@@ -66,7 +66,6 @@ var (
 
 func TestProxyStorageEntry_EncodeDecode(t *testing.T) {
 	AssertRoundTripFuzz[ProxyStorageEntry](t, 1000)
-	AssertDecodeNilData[ProxyStorageEntry](t)
 	AssertEncodeEmptyObj[ProxyStorageEntry](t, 17)
 }
 

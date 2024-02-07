@@ -21,11 +21,11 @@ import (
 	"math/big"
 	"time"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
 )
 
 func Example_simpleConnect() {
@@ -50,7 +50,7 @@ func Example_simpleConnect() {
 	}
 
 	fmt.Printf("You are connected to chain %v using %v v%v\n", chain, nodeName, nodeVersion)
-	// Output: You are connected to chain Development using Parity Polkadot v0.9.21-56cbe45f6c9
+	// Output: You are connected to chain Development using Parity Polkadot v0.9.43-ba42b9ce51d
 }
 
 func Example_listenToNewBlocks() {

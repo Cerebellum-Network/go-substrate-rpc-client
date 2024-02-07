@@ -17,9 +17,10 @@
 package types
 
 import (
+	"encoding/json"
 	"math/big"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
 )
 
 type UCompact big.Int
@@ -53,4 +54,8 @@ func (u UCompact) Encode(encoder scale.Encoder) error {
 		return err
 	}
 	return nil
+}
+
+func (u UCompact) MarshalJSON() ([]byte, error) {
+	return json.Marshal(u.Int64())
 }

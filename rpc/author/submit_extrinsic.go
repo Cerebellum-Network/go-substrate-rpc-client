@@ -17,8 +17,8 @@
 package author
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
 )
 
 // SubmitExtrinsic will submit a fully formatted extrinsic for block inclusion

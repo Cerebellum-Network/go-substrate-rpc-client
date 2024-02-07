@@ -21,7 +21,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
 )
 
 const (

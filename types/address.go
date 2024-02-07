@@ -19,8 +19,8 @@ package types
 import (
 	"fmt"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
 )
 
 // Address is a wrapper around an AccountId or an AccountIndex. It is encoded with a prefix in case of an AccountID.
@@ -37,7 +37,7 @@ func NewAddressFromAccountID(b []byte) (Address, error) {
 	accountID, err := NewAccountID(b)
 
 	if err != nil {
-		return Address{}, nil
+		return Address{}, err
 	}
 
 	return Address{

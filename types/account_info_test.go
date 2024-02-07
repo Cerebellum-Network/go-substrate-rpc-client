@@ -19,14 +19,13 @@ package types_test
 import (
 	"testing"
 
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/test_utils"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/test_utils"
 )
 
 func TestAccountInfoV4_EncodeDecode(t *testing.T) {
 	AssertRoundTripFuzz[AccountInfoV4](t, 100)
-	AssertDecodeNilData[AccountInfoV4](t)
 	AssertEncodeEmptyObj[AccountInfoV4](t, 9)
 }
 

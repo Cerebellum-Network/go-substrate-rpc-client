@@ -1,14 +1,13 @@
 package author_test
 
 import (
-	"fmt"
 	"testing"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/rpc/author"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/rpc/author"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -57,7 +56,7 @@ func TestAuthor_SubmitAndWatchExtrinsic(t *testing.T) {
 			TransactionVersion: rv.TransactionVersion,
 		}
 
-		fmt.Printf("Sending %v from %#x to %#x with nonce %v\n", amount, signature.TestKeyringPairAlice.PublicKey, bob.AsID, nonce)
+		t.Logf("Sending %v from %#x to %#x with nonce %v\n", amount, signature.TestKeyringPairAlice.PublicKey, bob.AsID, nonce)
 
 		// Sign the transaction using Alice's default account
 		err = ext.Sign(signature.TestKeyringPairAlice, o)

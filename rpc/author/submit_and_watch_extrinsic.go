@@ -20,10 +20,10 @@ import (
 	"context"
 	"sync"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
-	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/gethrpc"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
+	gethrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/gethrpc"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
 )
 
 // ExtrinsicStatusSubscription is a subscription established through one of the Client's subscribe methods.

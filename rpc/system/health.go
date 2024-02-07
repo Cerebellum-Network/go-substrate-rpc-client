@@ -17,7 +17,7 @@
 package system
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 )
 
 // Health retrieves the health status of the connected node

@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	rpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v7/gethrpc"
+	rpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/gethrpc"
 	mock "github.com/stretchr/testify/mock"
 )
 
@@ -29,6 +29,28 @@ func (_m *Client) Call(result interface{}, method string, args ...interface{}) e
 	}
 
 	return r0
+}
+
+// CallContext provides a mock function with given fields: ctx, result, method, args
+func (_m *Client) CallContext(ctx context.Context, result interface{}, method string, args ...interface{}) error {
+	var _ca []interface{}
+	_ca = append(_ca, ctx, result, method)
+	_ca = append(_ca, args...)
+	ret := _m.Called(_ca...)
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(context.Context, interface{}, string, ...interface{}) error); ok {
+		r0 = rf(ctx, result, method, args...)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}
+
+// Close provides a mock function with given fields:
+func (_m *Client) Close() {
+	_m.Called()
 }
 
 // Subscribe provides a mock function with given fields: ctx, namespace, subscribeMethodSuffix, unsubscribeMethodSuffix, notificationMethodSuffix, channel, args

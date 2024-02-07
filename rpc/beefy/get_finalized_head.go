@@ -17,7 +17,7 @@
 package beefy
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
 )
 
 // GetFinalizedHead returns the hash of the latest BEEFY block

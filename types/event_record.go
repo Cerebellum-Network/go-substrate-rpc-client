@@ -23,7 +23,7 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
 	"github.com/ethereum/go-ethereum/log"
 )
 
@@ -237,6 +237,25 @@ type EventRecords struct {
 
 	Offences_Offence []EventOffencesOffence `test-gen-blockchain:"polkadot"`
 
+	OrmlAssetRegistry_RegisteredAsset []EventOrmlAssetRegistryRegisteredAsset `test-gen-blockchain:"polkadot"`
+	OrmlAssetRegistry_UpdatedAsset    []EventOrmlAssetRegistryUpdatedAsset    `test-gen-blockchain:"polkadot"`
+
+	OrmlTokens_Endowed            []EventOrmlTokensEndowed            `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_DustLost           []EventOrmlTokensDustLost           `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_Transfer           []EventOrmlTokensTransfer           `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_Reserved           []EventOrmlTokensReserved           `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_Unreserved         []EventOrmlTokensUnreserved         `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_ReserveRepatriated []EventOrmlTokensReserveRepatriated `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_BalanceSet         []EventOrmlTokensBalanceSet         `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_TotalIssuanceSet   []EventOrmlTokensTotalIssuanceSet   `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_Withdrawn          []EventOrmlTokensWithdrawn          `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_Slashed            []EventOrmlTokensSlashed            `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_Deposited          []EventOrmlTokensDeposited          `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_LockSet            []EventOrmlTokensLockSet            `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_LockRemoved        []EventOrmlTokensLockRemoved        `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_Locked             []EventOrmlTokensLocked             `test-gen-blockchain:"centrifuge-parachain"`
+	OrmlTokens_Unlocked           []EventOrmlTokensUnlocked           `test-gen-blockchain:"centrifuge-parachain"`
+
 	Paras_CurrentCodeUpdated   []EventParasCurrentCodeUpdated   `test-gen-blockchain:"polkadot"`
 	Paras_CurrentHeadUpdated   []EventParasCurrentHeadUpdated   `test-gen-blockchain:"polkadot"`
 	Paras_CodeUpgradeScheduled []EventParasCodeUpgradeScheduled `test-gen-blockchain:"polkadot"`
@@ -266,11 +285,11 @@ type EventRecords struct {
 	Preimage_Noted     []EventPreimageNoted     `test-gen-skip:"true"`
 	Preimage_Requested []EventPreimageRequested `test-gen-skip:"true"`
 
-	Proxy_Announced        []EventProxyAnnounced        `test-gen-blockchain:"centrifuge-parachain"`
-	Proxy_AnonymousCreated []EventProxyAnonymousCreated `test-gen-blockchain:"centrifuge-parachain"`
-	Proxy_ProxyAdded       []EventProxyProxyAdded       `test-gen-blockchain:"centrifuge-parachain"`
-	Proxy_ProxyExecuted    []EventProxyProxyExecuted    `test-gen-blockchain:"centrifuge-parachain"`
-	Proxy_ProxyRemoved     []EventProxyProxyRemoved     `test-gen-blockchain:"centrifuge-parachain"`
+	Proxy_Announced     []EventProxyAnnounced     `test-gen-blockchain:"centrifuge-parachain"`
+	Proxy_PureCreated   []EventProxyPureCreated   `test-gen-blockchain:"centrifuge-parachain"`
+	Proxy_ProxyAdded    []EventProxyProxyAdded    `test-gen-blockchain:"centrifuge-parachain"`
+	Proxy_ProxyExecuted []EventProxyProxyExecuted `test-gen-blockchain:"centrifuge-parachain"`
+	Proxy_ProxyRemoved  []EventProxyProxyRemoved  `test-gen-blockchain:"centrifuge-parachain"`
 
 	Recovery_AccountRecovered  []EventRecoveryAccountRecovered `test-gen-skip:"true"`
 	Recovery_RecoveryClosed    []EventRecoveryClosed           `test-gen-skip:"true"`
@@ -381,13 +400,15 @@ type EventRecords struct {
 
 	TransactionPayment_TransactionFeePaid []EventTransactionPaymentTransactionFeePaid `test-gen-blockchain:"westend"`
 
-	Treasury_Awarded  []EventTreasuryAwarded  `test-gen-blockchain:"altair"`
-	Treasury_Burnt    []EventTreasuryBurnt    `test-gen-blockchain:"altair"`
-	Treasury_Deposit  []EventTreasuryDeposit  `test-gen-blockchain:"altair"`
-	Treasury_Proposed []EventTreasuryProposed `test-gen-blockchain:"altair"`
-	Treasury_Rejected []EventTreasuryRejected `test-gen-blockchain:"altair"`
-	Treasury_Rollover []EventTreasuryRollover `test-gen-blockchain:"altair"`
-	Treasury_Spending []EventTreasurySpending `test-gen-blockchain:"altair"`
+	Treasury_Proposed        []EventTreasuryProposed        `test-gen-blockchain:"altair"`
+	Treasury_Spending        []EventTreasurySpending        `test-gen-blockchain:"altair"`
+	Treasury_Awarded         []EventTreasuryAwarded         `test-gen-blockchain:"altair"`
+	Treasury_Rejected        []EventTreasuryRejected        `test-gen-blockchain:"altair"`
+	Treasury_Burnt           []EventTreasuryBurnt           `test-gen-blockchain:"altair"`
+	Treasury_Rollover        []EventTreasuryRollover        `test-gen-blockchain:"altair"`
+	Treasury_Deposit         []EventTreasuryDeposit         `test-gen-blockchain:"altair"`
+	Treasury_SpendApproved   []EventTreasurySpendApproved   `test-gen-blockchain:"altair"`
+	Treasury_UpdatedInactive []EventTreasuryUpdatedInactive `test-gen-blockchain:"altair"`
 
 	Uniques_ApprovalCancelled    []EventUniquesApprovalCancelled    `test-gen-blockchain:"altair"`
 	Uniques_ApprovedTransfer     []EventUniquesApprovedTransfer     `test-gen-blockchain:"altair"`

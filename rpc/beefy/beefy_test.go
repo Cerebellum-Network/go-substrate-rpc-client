@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v7/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
 )
 
 var testBeefy Beefy
