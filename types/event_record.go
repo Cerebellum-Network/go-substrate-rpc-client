@@ -179,6 +179,7 @@ type EventRecords struct {
 	ElectionProviderMultiPhase_Slashed              []EventElectionProviderMultiPhaseSlashed              `test-gen-blockchain:"polkadot"`
 	ElectionProviderMultiPhase_SignedPhaseStarted   []EventElectionProviderMultiPhaseSignedPhaseStarted   `test-gen-blockchain:"polkadot"`
 	ElectionProviderMultiPhase_UnsignedPhaseStarted []EventElectionProviderMultiPhaseUnsignedPhaseStarted `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_PhaseTransitioned    []EventElectionProviderMultiPhasePhaseTransitioned    `test-gen-blockchain:"polkadot"`
 
 	Elections_CandidateSlashed  []EventElectionsCandidateSlashed  `test-gen-blockchain:"altair"`
 	Elections_ElectionError     []EventElectionsElectionError     `test-gen-blockchain:"altair"`
