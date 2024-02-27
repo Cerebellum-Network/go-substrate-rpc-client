@@ -593,6 +593,45 @@ type ValidatorPrefs struct {
 	Blocked    bool
 }
 
+type ElectionProviderPhase struct {
+	IsOff                 bool
+	IsSigned              bool
+	IsUnsigned            bool
+	IsUnsignedFlag        bool
+	IsUnsignedBlockNumber uint32
+	IsEmergency           bool
+}
+
+func (p *ElectionProviderPhase) Decode(decoder scale.Decoder) error {
+	var err1, err2 error
+	b, err1 := decoder.ReadOneByte()
+	if err1 != nil {
+		return err1
+	}
+
+	switch b {
+	case 0:
+		p.IsOff = true
+	case 1:
+		p.IsSigned = true
+	case 2:
+		p.IsUnsigned = true
+		err1 = decoder.Decode(&p.IsUnsignedFlag)
+		err2 = decoder.Decode(&p.IsUnsignedBlockNumber)
+	case 3:
+		p.IsEmergency = true
+	}
+
+	if err1 != nil {
+		return err1
+	}
+	if err2 != nil {
+		return err2
+	}
+
+	return nil
+}
+
 // Phase is an enum describing the current phase of the event (applying the extrinsic or finalized)
 type Phase struct {
 	IsApplyExtrinsic bool

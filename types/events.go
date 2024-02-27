@@ -1553,8 +1553,9 @@ type EventElectionProviderMultiPhaseUnsignedPhaseStarted struct {
 }
 
 type EventElectionProviderMultiPhasePhaseTransitioned struct {
-	From   Phase
-	To     Phase
+	Phase  Phase
+	From   ElectionProviderPhase
+	To     ElectionProviderPhase
 	Round  U32
 	Topics []Hash
 }
