@@ -1552,6 +1552,14 @@ type EventElectionProviderMultiPhaseUnsignedPhaseStarted struct {
 	Topics []Hash
 }
 
+type EventElectionProviderMultiPhasePhaseTransitioned struct {
+	Phase  Phase
+	From   ElectionProviderPhase
+	To     ElectionProviderPhase
+	Round  U32
+	Topics []Hash
+}
+
 // EventDemocracyPreimageNoted is emitted when a proposal's preimage was noted, and the deposit taken.
 type EventDemocracyPreimageNoted struct {
 	Phase     Phase

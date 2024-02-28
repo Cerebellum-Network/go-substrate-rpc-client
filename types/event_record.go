@@ -179,6 +179,7 @@ type EventRecords struct {
 	ElectionProviderMultiPhase_Slashed              []EventElectionProviderMultiPhaseSlashed              `test-gen-blockchain:"polkadot"`
 	ElectionProviderMultiPhase_SignedPhaseStarted   []EventElectionProviderMultiPhaseSignedPhaseStarted   `test-gen-blockchain:"polkadot"`
 	ElectionProviderMultiPhase_UnsignedPhaseStarted []EventElectionProviderMultiPhaseUnsignedPhaseStarted `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_PhaseTransitioned    []EventElectionProviderMultiPhasePhaseTransitioned    `test-gen-blockchain:"polkadot"`
 
 	Elections_CandidateSlashed  []EventElectionsCandidateSlashed  `test-gen-blockchain:"altair"`
 	Elections_ElectionError     []EventElectionsElectionError     `test-gen-blockchain:"altair"`
@@ -590,6 +591,45 @@ func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error { 
 type ValidatorPrefs struct {
 	Commission U32
 	Blocked    bool
+}
+
+type ElectionProviderPhase struct {
+	IsOff                 bool
+	IsSigned              bool
+	IsUnsigned            bool
+	IsUnsignedFlag        bool
+	IsUnsignedBlockNumber uint32
+	IsEmergency           bool
+}
+
+func (p *ElectionProviderPhase) Decode(decoder scale.Decoder) error {
+	var err1, err2 error
+	b, err1 := decoder.ReadOneByte()
+	if err1 != nil {
+		return err1
+	}
+
+	switch b {
+	case 0:
+		p.IsOff = true
+	case 1:
+		p.IsSigned = true
+	case 2:
+		p.IsUnsigned = true
+		err1 = decoder.Decode(&p.IsUnsignedFlag)
+		err2 = decoder.Decode(&p.IsUnsignedBlockNumber)
+	case 3:
+		p.IsEmergency = true
+	}
+
+	if err1 != nil {
+		return err1
+	}
+	if err2 != nil {
+		return err2
+	}
+
+	return nil
 }
 
 // Phase is an enum describing the current phase of the event (applying the extrinsic or finalized)
