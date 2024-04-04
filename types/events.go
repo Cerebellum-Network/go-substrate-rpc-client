@@ -1506,6 +1506,7 @@ type EventDemocracyVoted struct {
 type EventElectionProviderMultiPhaseSolutionStored struct {
 	Phase           Phase
 	ElectionCompute ElectionCompute
+	Origin          OptionAccountID
 	PrevEjected     bool
 	Topics          []Hash
 }
@@ -1517,6 +1518,12 @@ type EventElectionProviderMultiPhaseElectionFinalized struct {
 	ElectionCompute ElectionCompute
 	ElectionScore   ElectionScore
 	Topics          []Hash
+}
+
+// / EventElectionProviderMultiPhaseElectionFailed is emitted when the election has been failed.
+type EventElectionProviderMultiPhaseElectionFailed struct {
+	Phase  Phase
+	Topics []Hash
 }
 
 // EventElectionProviderMultiPhaseRewarded is emitted when an account has been rewarded for their
@@ -1535,21 +1542,6 @@ type EventElectionProviderMultiPhaseSlashed struct {
 	Account AccountID
 	Value   U128
 	Topics  []Hash
-}
-
-// EventElectionProviderMultiPhaseSignedPhaseStarted is emitted when the signed phase of the given round has started.
-type EventElectionProviderMultiPhaseSignedPhaseStarted struct {
-	Phase  Phase
-	Round  U32
-	Topics []Hash
-}
-
-// EventElectionProviderMultiPhaseUnsignedPhaseStarted is emitted when the unsigned phase of
-// the given round has started.
-type EventElectionProviderMultiPhaseUnsignedPhaseStarted struct {
-	Phase  Phase
-	Round  U32
-	Topics []Hash
 }
 
 type EventElectionProviderMultiPhasePhaseTransitioned struct {

@@ -173,13 +173,12 @@ type EventRecords struct {
 	Democracy_Vetoed          []EventDemocracyVetoed          `test-gen-blockchain:"centrifuge-parachain"`
 	Democracy_Voted           []EventDemocracyVoted           `test-gen-blockchain:"centrifuge-parachain"`
 
-	ElectionProviderMultiPhase_SolutionStored       []EventElectionProviderMultiPhaseSolutionStored       `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_ElectionFinalized    []EventElectionProviderMultiPhaseElectionFinalized    `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_Rewarded             []EventElectionProviderMultiPhaseRewarded             `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_Slashed              []EventElectionProviderMultiPhaseSlashed              `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_SignedPhaseStarted   []EventElectionProviderMultiPhaseSignedPhaseStarted   `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_UnsignedPhaseStarted []EventElectionProviderMultiPhaseUnsignedPhaseStarted `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_PhaseTransitioned    []EventElectionProviderMultiPhasePhaseTransitioned    `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_SolutionStored    []EventElectionProviderMultiPhaseSolutionStored    `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_ElectionFinalized []EventElectionProviderMultiPhaseElectionFinalized `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_ElectionFailed    []EventElectionProviderMultiPhaseElectionFailed    `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_Rewarded          []EventElectionProviderMultiPhaseRewarded          `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_Slashed           []EventElectionProviderMultiPhaseSlashed           `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_PhaseTransitioned []EventElectionProviderMultiPhasePhaseTransitioned `test-gen-blockchain:"polkadot"`
 
 	Elections_CandidateSlashed  []EventElectionsCandidateSlashed  `test-gen-blockchain:"altair"`
 	Elections_ElectionError     []EventElectionsElectionError     `test-gen-blockchain:"altair"`
