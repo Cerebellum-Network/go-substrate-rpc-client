@@ -19,7 +19,7 @@ package types
 import (
 	"errors"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
 )
 
 type Tranche struct {

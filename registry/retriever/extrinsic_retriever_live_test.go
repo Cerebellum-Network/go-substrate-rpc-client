@@ -11,13 +11,13 @@ import (
 	"testing"
 	"time"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry/exec"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry/parser"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/rpc/chain/generic"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v9"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/registry"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/registry/exec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/registry/parser"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/rpc/chain/generic"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types"
 )
 
 var (

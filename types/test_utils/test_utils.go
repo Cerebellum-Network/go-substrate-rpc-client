@@ -22,8 +22,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types/codec"
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/crypto/blake2b"

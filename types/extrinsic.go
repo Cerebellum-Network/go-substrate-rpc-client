@@ -24,9 +24,9 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types/codec"
 )
 
 const (

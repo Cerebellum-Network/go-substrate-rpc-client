@@ -23,7 +23,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
 )
 
 // Hexer interface is implemented by any type that has a Hex() function returning a string

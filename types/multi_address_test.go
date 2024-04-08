@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/signature"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/test_utils"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/signature"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types/codec"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types/test_utils"
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"
 )

@@ -1,6 +1,6 @@
 package retriever
 
-import libErr "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/error"
+import libErr "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/error"
 
 const (
 	ErrInternalStateUpdate   = libErr.Error("internal state update")

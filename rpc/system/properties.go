@@ -17,7 +17,7 @@
 package system
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types"
 )
 
 // Properties retrieves a custom set of properties as a JSON object, defined in the chain spec

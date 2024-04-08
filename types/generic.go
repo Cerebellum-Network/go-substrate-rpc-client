@@ -1,6 +1,6 @@
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
 
 type Option[T any] struct {
 	hasValue bool

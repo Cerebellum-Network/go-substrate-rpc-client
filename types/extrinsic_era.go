@@ -17,7 +17,7 @@
 package types
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
 )
 
 // ExtrinsicEra indicates either a mortal or immortal extrinsic

@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
-	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
+	. "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types/codec"
 )
 
 // PhaseEnum is an enum example. Since Go has no enums, it is implemented as a struct with flags for each

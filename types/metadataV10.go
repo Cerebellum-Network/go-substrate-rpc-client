@@ -22,9 +22,9 @@ import (
 	"hash"
 	"strings"
 
-	ghash "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/hash"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/xxhash"
+	ghash "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/hash"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/xxhash"
 )
 
 // Modelled after packages/types/src/Metadata/v10/Metadata.ts
