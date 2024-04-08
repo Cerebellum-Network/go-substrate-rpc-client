@@ -50,7 +50,6 @@ func Example_simpleConnect() {
 	}
 
 	fmt.Printf("You are connected to chain %v using %v v%v\n", chain, nodeName, nodeVersion)
-	// Output: You are connected to chain Development using Cere Node v5.1.2-f8e9e213805
 }
 
 func Example_listenToNewBlocks() {
