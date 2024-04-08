@@ -60,11 +60,10 @@ type EventBalancesTransfer struct {
 
 // EventBalanceSet is emitted when a balance is set by root
 type EventBalancesBalanceSet struct {
-	Phase    Phase
-	Who      AccountID
-	Free     U128
-	Reserved U128
-	Topics   []Hash
+	Phase  Phase
+	Who    AccountID
+	Free   U128
+	Topics []Hash
 }
 
 // EventDeposit is emitted when an account receives some free balance
@@ -1241,7 +1240,6 @@ type EventDemocracyTabled struct {
 	Phase         Phase
 	ProposalIndex U32
 	Balance       U128
-	Accounts      []AccountID
 	Topics        []Hash
 }
 
@@ -1456,14 +1454,6 @@ type EventDemocracyCancelled struct {
 	Topics          []Hash
 }
 
-// EventDemocracyExecuted is emitted when a proposal has been enacted.
-type EventDemocracyExecuted struct {
-	Phase           Phase
-	ReferendumIndex U32
-	Result          DispatchResult
-	Topics          []Hash
-}
-
 // EventDemocracyDelegated is emitted when an account has delegated their vote to another account.
 type EventDemocracyDelegated struct {
 	Phase  Phase
@@ -1520,7 +1510,7 @@ type EventElectionProviderMultiPhaseElectionFinalized struct {
 	Topics          []Hash
 }
 
-// / EventElectionProviderMultiPhaseElectionFailed is emitted when the election has been failed.
+// EventElectionProviderMultiPhaseElectionFailed is emitted when the election has been failed.
 type EventElectionProviderMultiPhaseElectionFailed struct {
 	Phase  Phase
 	Topics []Hash
@@ -1552,15 +1542,6 @@ type EventElectionProviderMultiPhasePhaseTransitioned struct {
 	Topics []Hash
 }
 
-// EventDemocracyPreimageNoted is emitted when a proposal's preimage was noted, and the deposit taken.
-type EventDemocracyPreimageNoted struct {
-	Phase     Phase
-	Hash      Hash
-	AccountID AccountID
-	Balance   U128
-	Topics    []Hash
-}
-
 // EventDemocracyPreimageUsed is emitted when a proposal preimage was removed and used (the deposit was returned).
 type EventDemocracyPreimageUsed struct {
 	Phase     Phase
@@ -1568,33 +1549,6 @@ type EventDemocracyPreimageUsed struct {
 	AccountID AccountID
 	Balance   U128
 	Topics    []Hash
-}
-
-// EventDemocracyPreimageInvalid is emitted when a proposal could not be executed because its preimage was invalid.
-type EventDemocracyPreimageInvalid struct {
-	Phase           Phase
-	Hash            Hash
-	ReferendumIndex U32
-	Topics          []Hash
-}
-
-// EventDemocracyPreimageMissing is emitted when a proposal could not be executed because its preimage was missing.
-type EventDemocracyPreimageMissing struct {
-	Phase           Phase
-	Hash            Hash
-	ReferendumIndex U32
-	Topics          []Hash
-}
-
-// EventDemocracyPreimageReaped is emitted when a registered preimage was removed
-// and the deposit collected by the reaper (last item).
-type EventDemocracyPreimageReaped struct {
-	Phase    Phase
-	Hash     Hash
-	Provider AccountID
-	Balance  U128
-	Who      AccountID
-	Topics   []Hash
 }
 
 // EventDemocracySeconded is emitted when an account has seconded a proposal.
@@ -2136,13 +2090,6 @@ type EventSocietyDefenderVote struct {
 	Topics []Hash
 }
 
-// EventSocietyNewMaxMembers is emitted when a new [max] member count has been set
-type EventSocietyNewMaxMembers struct {
-	Phase  Phase
-	Max    U32
-	Topics []Hash
-}
-
 // EventSocietyUnfounded is emitted when society is unfounded
 type EventSocietyUnfounded struct {
 	Phase   Phase
@@ -2378,7 +2325,7 @@ type EventWhitelistWhitelistedCallRemoved struct {
 type EventWhitelistWhitelistedCallDispatched struct {
 	Phase    Phase
 	CallHash Hash
-	Result   DispatchResult
+	Result   DispatchResultWithPostInfo
 	Topics   []Hash
 }
 
@@ -2599,16 +2546,6 @@ func (sle SchedulerLookupError) Encode(encoder scale.Encoder) error {
 	return encoder.PushByte(byte(sle))
 }
 
-// EventSchedulerCallLookupFailed is emitted when the call for the provided hash was not found
-// so the task has been aborted.
-type EventSchedulerCallLookupFailed struct {
-	Phase  Phase
-	Task   TaskAddress
-	ID     OptionBytes
-	Error  SchedulerLookupError
-	Topics []Hash
-}
-
 // EventPreimageCleared is emitted when a preimage has been cleared
 type EventPreimageCleared struct {
 	Phase  Phase
@@ -2687,14 +2624,14 @@ type EventSudoSudid struct {
 // EventSudoKeyChanged is emitted when the sudoer just switched identity; the old key is supplied.
 type EventSudoKeyChanged struct {
 	Phase     Phase
-	AccountID AccountID
+	AccountID OptionAccountID
 	Topics    []Hash
 }
 
 // A sudo just took place.
 type EventSudoAsDone struct {
 	Phase  Phase
-	Done   bool
+	Done   DispatchResult
 	Topics []Hash
 }
 
@@ -3303,7 +3240,6 @@ type EventUtilityBatchCompleted struct {
 // EventUtilityDispatchedAs is emitted when a call was dispatched
 type EventUtilityDispatchedAs struct {
 	Phase  Phase
-	Index  U32
 	Result DispatchResult
 	Topics []Hash
 }
