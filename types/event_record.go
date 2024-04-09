@@ -23,7 +23,7 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
 	"github.com/ethereum/go-ethereum/log"
 )
 
@@ -63,6 +63,7 @@ func (e *EventRecordsRaw) Decode(decoder scale.Decoder) error {
 //
 //nolint:stylecheck,lll,revive
 type EventRecords struct {
+	// NOT included into Cere runtime
 	Auctions_AuctionStarted     []EventAuctionsAuctionStarted     `test-gen-blockchain:"polkadot"`
 	Auctions_AuctionClosed      []EventAuctionsAuctionClosed      `test-gen-blockchain:"polkadot"`
 	Auctions_Reserved           []EventAuctionsReserved           `test-gen-blockchain:"polkadot"`
@@ -71,6 +72,7 @@ type EventRecords struct {
 	Auctions_BidAccepted        []EventAuctionsBidAccepted        `test-gen-blockchain:"polkadot"`
 	Auctions_WinningOffset      []EventAuctionsWinningOffset      `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	Assets_Created             []EventAssetCreated             `test-gen-skip:"true"`
 	Assets_Issued              []EventAssetIssued              `test-gen-skip:"true"`
 	Assets_Transferred         []EventAssetTransferred         `test-gen-skip:"true"`
@@ -90,8 +92,11 @@ type EventRecords struct {
 	Assets_TransferredApproved []EventAssetTransferredApproved `test-gen-skip:"true"`
 	Assets_AssetStatusChanged  []EventAssetAssetStatusChanged  `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	BagsList_Rebagged []EventBagsListRebagged `test-gen-blockchain:"polkadot"`
+	// todo: add 'ScoreUpdated'
 
+	// Included into Cere runtime
 	Balances_BalanceSet         []EventBalancesBalanceSet         `test-gen-blockchain:"centrifuge-parachain"`
 	Balances_Deposit            []EventBalancesDeposit            `test-gen-blockchain:"centrifuge-parachain"`
 	Balances_DustLost           []EventBalancesDustLost           `test-gen-blockchain:"centrifuge-parachain"`
@@ -102,7 +107,9 @@ type EventRecords struct {
 	Balances_Transfer           []EventBalancesTransfer           `test-gen-blockchain:"centrifuge-parachain"`
 	Balances_Unreserved         []EventBalancesUnreserved         `test-gen-blockchain:"centrifuge-parachain"`
 	Balances_Withdraw           []EventBalancesWithdraw           `test-gen-blockchain:"centrifuge-parachain"`
+	// todo: add 'Minted', 'Burned', 'Suspended', 'Restored', 'Upgraded', 'Issued', 'Rescinded', 'Locked', 'Unlocked', 'Thawed'
 
+	// Included into Cere runtime
 	Bounties_BountyProposed     []EventBountiesBountyProposed     `test-gen-blockchain:"polkadot"`
 	Bounties_BountyRejected     []EventBountiesBountyRejected     `test-gen-blockchain:"polkadot"`
 	Bounties_BountyBecameActive []EventBountiesBountyBecameActive `test-gen-blockchain:"polkadot"`
@@ -111,19 +118,23 @@ type EventRecords struct {
 	Bounties_BountyCanceled     []EventBountiesBountyCanceled     `test-gen-blockchain:"polkadot"`
 	Bounties_BountyExtended     []EventBountiesBountyExtended     `test-gen-blockchain:"polkadot"`
 
+	// Included into Cere runtime
 	ChildBounties_Added    []EventChildBountiesAdded    `test-gen-skip:"true"`
 	ChildBounties_Awarded  []EventChildBountiesAwarded  `test-gen-skip:"true"`
 	ChildBounties_Claimed  []EventChildBountiesClaimed  `test-gen-skip:"true"`
 	ChildBounties_Canceled []EventChildBountiesCanceled `test-gen-skip:"true"`
 
+	// NOT included into Cere runtime
 	Claims_Claimed []EventClaimsClaimed `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	CollatorSelection_NewInvulnerables     []EventCollatorSelectionNewInvulnerables     `test-gen-blockchain:"altair"`
 	CollatorSelection_NewDesiredCandidates []EventCollatorSelectionNewDesiredCandidates `test-gen-blockchain:"altair"`
 	CollatorSelection_NewCandidacyBond     []EventCollatorSelectionNewCandidacyBond     `test-gen-blockchain:"altair"`
 	CollatorSelection_CandidateAdded       []EventCollatorSelectionCandidateAdded       `test-gen-blockchain:"altair"`
 	CollatorSelection_CandidateRemoved     []EventCollatorSelectionCandidateRemoved     `test-gen-blockchain:"altair"`
 
+	// Included into Cere runtime
 	Contracts_CodeRemoved         []EventContractsCodeRemoved         `test-gen-skip:"true"`
 	Contracts_CodeStored          []EventContractsCodeStored          `test-gen-skip:"true"`
 	Contracts_ContractCodeUpdated []EventContractsContractCodeUpdated `test-gen-skip:"true"`
@@ -131,9 +142,11 @@ type EventRecords struct {
 	Contracts_Instantiated        []EventContractsInstantiated        `test-gen-skip:"true"`
 	Contracts_Terminated          []EventContractsTerminated          `test-gen-skip:"true"`
 
+	// NOT included into Cere runtime
 	ConvictionVoting_Delegated   []EventConvictionVotingDelegated   `test-gen-skip:"true"`
 	ConvictionVoting_Undelegated []EventConvictionVotingUndelegated `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	Council_Approved       []EventCouncilApproved       `test-gen-blockchain:"centrifuge-parachain"`
 	Council_Closed         []EventCouncilClosed         `test-gen-blockchain:"centrifuge-parachain"`
 	Council_Disapproved    []EventCouncilDisapproved    `test-gen-blockchain:"centrifuge-parachain"`
@@ -142,6 +155,7 @@ type EventRecords struct {
 	Council_Proposed       []EventCouncilProposed       `test-gen-blockchain:"centrifuge-parachain"`
 	Council_Voted          []EventCouncilVoted          `test-gen-blockchain:"centrifuge-parachain"`
 
+	// NOT included into Cere runtime
 	Crowdloan_Created           []EventCrowdloanCreated           `test-gen-blockchain:"polkadot"`
 	Crowdloan_Contributed       []EventCrowdloanContributed       `test-gen-blockchain:"polkadot"`
 	Crowdloan_Withdrew          []EventCrowdloanWithdrew          `test-gen-blockchain:"polkadot"`
@@ -153,34 +167,30 @@ type EventRecords struct {
 	Crowdloan_MemoUpdated       []EventCrowdloanMemoUpdated       `test-gen-blockchain:"polkadot"`
 	Crowdloan_AddedToNewRaise   []EventCrowdloanAddedToNewRaise   `test-gen-blockchain:"polkadot"`
 
-	Democracy_Blacklisted     []EventDemocracyBlacklisted     `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Cancelled       []EventDemocracyCancelled       `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Delegated       []EventDemocracyDelegated       `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Executed        []EventDemocracyExecuted        `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_ExternalTabled  []EventDemocracyExternalTabled  `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_NotPassed       []EventDemocracyNotPassed       `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Passed          []EventDemocracyPassed          `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_PreimageInvalid []EventDemocracyPreimageInvalid `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_PreimageMissing []EventDemocracyPreimageMissing `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_PreimageNoted   []EventDemocracyPreimageNoted   `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_PreimageReaped  []EventDemocracyPreimageReaped  `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_PreimageUsed    []EventDemocracyPreimageUsed    `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Proposed        []EventDemocracyProposed        `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Seconded        []EventDemocracySeconded        `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Started         []EventDemocracyStarted         `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Tabled          []EventDemocracyTabled          `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Undelegated     []EventDemocracyUndelegated     `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Vetoed          []EventDemocracyVetoed          `test-gen-blockchain:"centrifuge-parachain"`
-	Democracy_Voted           []EventDemocracyVoted           `test-gen-blockchain:"centrifuge-parachain"`
+	// Included into Cere runtime
+	Democracy_Blacklisted    []EventDemocracyBlacklisted    `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Cancelled      []EventDemocracyCancelled      `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Delegated      []EventDemocracyDelegated      `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_ExternalTabled []EventDemocracyExternalTabled `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_NotPassed      []EventDemocracyNotPassed      `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Passed         []EventDemocracyPassed         `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Proposed       []EventDemocracyProposed       `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Seconded       []EventDemocracySeconded       `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Started        []EventDemocracyStarted        `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Tabled         []EventDemocracyTabled         `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Undelegated    []EventDemocracyUndelegated    `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Vetoed         []EventDemocracyVetoed         `test-gen-blockchain:"centrifuge-parachain"`
+	Democracy_Voted          []EventDemocracyVoted          `test-gen-blockchain:"centrifuge-parachain"`
 
-	ElectionProviderMultiPhase_SolutionStored       []EventElectionProviderMultiPhaseSolutionStored       `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_ElectionFinalized    []EventElectionProviderMultiPhaseElectionFinalized    `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_Rewarded             []EventElectionProviderMultiPhaseRewarded             `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_Slashed              []EventElectionProviderMultiPhaseSlashed              `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_SignedPhaseStarted   []EventElectionProviderMultiPhaseSignedPhaseStarted   `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_UnsignedPhaseStarted []EventElectionProviderMultiPhaseUnsignedPhaseStarted `test-gen-blockchain:"polkadot"`
-	ElectionProviderMultiPhase_PhaseTransitioned    []EventElectionProviderMultiPhasePhaseTransitioned    `test-gen-blockchain:"polkadot"`
+	// Included into Cere runtime
+	ElectionProviderMultiPhase_SolutionStored    []EventElectionProviderMultiPhaseSolutionStored    `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_ElectionFinalized []EventElectionProviderMultiPhaseElectionFinalized `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_ElectionFailed    []EventElectionProviderMultiPhaseElectionFailed    `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_Rewarded          []EventElectionProviderMultiPhaseRewarded          `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_Slashed           []EventElectionProviderMultiPhaseSlashed           `test-gen-blockchain:"polkadot"`
+	ElectionProviderMultiPhase_PhaseTransitioned []EventElectionProviderMultiPhasePhaseTransitioned `test-gen-blockchain:"polkadot"`
 
+	// Included into Cere runtime
 	Elections_CandidateSlashed  []EventElectionsCandidateSlashed  `test-gen-blockchain:"altair"`
 	Elections_ElectionError     []EventElectionsElectionError     `test-gen-blockchain:"altair"`
 	Elections_EmptyTerm         []EventElectionsEmptyTerm         `test-gen-blockchain:"altair"`
@@ -189,20 +199,24 @@ type EventRecords struct {
 	Elections_Renounced         []EventElectionsRenounced         `test-gen-blockchain:"altair"`
 	Elections_SeatHolderSlashed []EventElectionsSeatHolderSlashed `test-gen-blockchain:"altair"`
 
+	// NOT included into Cere runtime
 	Gilt_BidPlaced    []EventGiltBidPlaced    `test-gen-skip:"true"`
 	Gilt_BidRetracted []EventGiltBidRetracted `test-gen-skip:"true"`
 	Gilt_GiltIssued   []EventGiltGiltIssued   `test-gen-skip:"true"`
 	Gilt_GiltThawed   []EventGiltGiltThawed   `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	Grandpa_NewAuthorities []EventGrandpaNewAuthorities `test-gen-blockchain:"polkadot"`
 	Grandpa_Paused         []EventGrandpaPaused         `test-gen-blockchain:"polkadot"`
 	Grandpa_Resumed        []EventGrandpaResumed        `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	Hrmp_OpenChannelRequested []EventHRMPOpenChannelRequested `test-gen-blockchain:"polkadot"`
 	Hrmp_OpenChannelCanceled  []EventHRMPOpenChannelCanceled  `test-gen-blockchain:"polkadot"`
 	Hrmp_OpenChannelAccepted  []EventHRMPOpenChannelAccepted  `test-gen-blockchain:"polkadot"`
 	Hrmp_ChannelClosed        []EventHRMPChannelClosed        `test-gen-blockchain:"polkadot"`
 
+	// Included into Cere runtime
 	Identity_IdentityCleared      []EventIdentityCleared              `test-gen-blockchain:"centrifuge-parachain"`
 	Identity_IdentityKilled       []EventIdentityKilled               `test-gen-blockchain:"centrifuge-parachain"`
 	Identity_IdentitySet          []EventIdentitySet                  `test-gen-blockchain:"centrifuge-parachain"`
@@ -214,33 +228,41 @@ type EventRecords struct {
 	Identity_SubIdentityRemoved   []EventIdentitySubIdentityRemoved   `test-gen-blockchain:"centrifuge-parachain"`
 	Identity_SubIdentityRevoked   []EventIdentitySubIdentityRevoked   `test-gen-blockchain:"centrifuge-parachain"`
 
+	// Included into Cere runtime
 	ImOnline_AllGood           []EventImOnlineAllGood           `test-gen-blockchain:"polkadot"`
 	ImOnline_HeartbeatReceived []EventImOnlineHeartbeatReceived `test-gen-blockchain:"polkadot"`
 	ImOnline_SomeOffline       []EventImOnlineSomeOffline       `test-gen-blockchain:"polkadot"`
 
+	// Included into Cere runtime
 	Indices_IndexAssigned []EventIndicesIndexAssigned `test-gen-blockchain:"polkadot"`
 	Indices_IndexFreed    []EventIndicesIndexFreed    `test-gen-blockchain:"polkadot"`
 	Indices_IndexFrozen   []EventIndicesIndexFrozen   `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	Lottery_LotteryStarted []EventLotteryLotteryStarted `test-gen-skip:"true"`
 	Lottery_CallsUpdated   []EventLotteryCallsUpdated   `test-gen-skip:"true"`
 	Lottery_Winner         []EventLotteryWinner         `test-gen-skip:"true"`
 	Lottery_TicketBought   []EventLotteryTicketBought   `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	Multisig_MultisigApproval  []EventMultisigApproval    `test-gen-blockchain:"altair"`
 	Multisig_MultisigCancelled []EventMultisigCancelled   `test-gen-blockchain:"altair"`
 	Multisig_MultisigExecuted  []EventMultisigExecuted    `test-gen-blockchain:"altair"`
 	Multisig_NewMultisig       []EventMultisigNewMultisig `test-gen-blockchain:"altair"`
 
+	// NOT included into Cere runtime
 	NftSales_ForSale []EventNftSalesForSale `test-gen-blockchain:"altair"`
 	NftSales_Removed []EventNftSalesRemoved `test-gen-blockchain:"altair"`
 	NftSales_Sold    []EventNftSalesSold    `test-gen-blockchain:"altair"`
 
+	// Included into Cere runtime
 	Offences_Offence []EventOffencesOffence `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	OrmlAssetRegistry_RegisteredAsset []EventOrmlAssetRegistryRegisteredAsset `test-gen-blockchain:"polkadot"`
 	OrmlAssetRegistry_UpdatedAsset    []EventOrmlAssetRegistryUpdatedAsset    `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	OrmlTokens_Endowed            []EventOrmlTokensEndowed            `test-gen-blockchain:"centrifuge-parachain"`
 	OrmlTokens_DustLost           []EventOrmlTokensDustLost           `test-gen-blockchain:"centrifuge-parachain"`
 	OrmlTokens_Transfer           []EventOrmlTokensTransfer           `test-gen-blockchain:"centrifuge-parachain"`
@@ -257,6 +279,7 @@ type EventRecords struct {
 	OrmlTokens_Locked             []EventOrmlTokensLocked             `test-gen-blockchain:"centrifuge-parachain"`
 	OrmlTokens_Unlocked           []EventOrmlTokensUnlocked           `test-gen-blockchain:"centrifuge-parachain"`
 
+	// NOT included into Cere runtime
 	Paras_CurrentCodeUpdated   []EventParasCurrentCodeUpdated   `test-gen-blockchain:"polkadot"`
 	Paras_CurrentHeadUpdated   []EventParasCurrentHeadUpdated   `test-gen-blockchain:"polkadot"`
 	Paras_CodeUpgradeScheduled []EventParasCodeUpgradeScheduled `test-gen-blockchain:"polkadot"`
@@ -266,15 +289,18 @@ type EventRecords struct {
 	Paras_PvfCheckAccepted     []EventParasPvfCheckAccepted     `test-gen-blockchain:"polkadot"`
 	Paras_PvfCheckRejected     []EventParasPvfCheckRejected     `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	ParasDisputes_DisputeInitiated []EventParasDisputesDisputeInitiated `test-gen-skip:"true"`
 	ParasDisputes_DisputeConcluded []EventParasDisputesDisputeConcluded `test-gen-skip:"true"`
 	ParasDisputes_DisputeTimedOut  []EventParasDisputesDisputeTimedOut  `test-gen-skip:"true"`
 	ParasDisputes_Revert           []EventParasDisputesRevert           `test-gen-skip:"true"`
 
+	// NOT included into Cere runtime
 	ParaInclusion_CandidateBacked   []EventParaInclusionCandidateBacked   `test-gen-blockchain:"polkadot"`
 	ParaInclusion_CandidateIncluded []EventParaInclusionCandidateIncluded `test-gen-blockchain:"polkadot"`
 	ParaInclusion_CandidateTimedOut []EventParaInclusionCandidateTimedOut `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	ParachainSystem_ValidationFunctionStored    []EventParachainSystemValidationFunctionStored    `test-gen-blockchain:"centrifuge-parachain"`
 	ParachainSystem_ValidationFunctionApplied   []EventParachainSystemValidationFunctionApplied   `test-gen-blockchain:"centrifuge-parachain"`
 	ParachainSystem_ValidationFunctionDiscarded []EventParachainSystemValidationFunctionDiscarded `test-gen-blockchain:"centrifuge-parachain"`
@@ -282,16 +308,19 @@ type EventRecords struct {
 	ParachainSystem_DownwardMessagesReceived    []EventParachainSystemDownwardMessagesReceived    `test-gen-blockchain:"centrifuge-parachain"`
 	ParachainSystem_DownwardMessagesProcessed   []EventParachainSystemDownwardMessagesProcessed   `test-gen-blockchain:"centrifuge-parachain"`
 
+	// Included into Cere runtime
 	Preimage_Cleared   []EventPreimageCleared   `test-gen-skip:"true"`
 	Preimage_Noted     []EventPreimageNoted     `test-gen-skip:"true"`
 	Preimage_Requested []EventPreimageRequested `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	Proxy_Announced     []EventProxyAnnounced     `test-gen-blockchain:"centrifuge-parachain"`
 	Proxy_PureCreated   []EventProxyPureCreated   `test-gen-blockchain:"centrifuge-parachain"`
 	Proxy_ProxyAdded    []EventProxyProxyAdded    `test-gen-blockchain:"centrifuge-parachain"`
 	Proxy_ProxyExecuted []EventProxyProxyExecuted `test-gen-blockchain:"centrifuge-parachain"`
 	Proxy_ProxyRemoved  []EventProxyProxyRemoved  `test-gen-blockchain:"centrifuge-parachain"`
 
+	// Included into Cere runtime
 	Recovery_AccountRecovered  []EventRecoveryAccountRecovered `test-gen-skip:"true"`
 	Recovery_RecoveryClosed    []EventRecoveryClosed           `test-gen-skip:"true"`
 	Recovery_RecoveryCreated   []EventRecoveryCreated          `test-gen-skip:"true"`
@@ -299,10 +328,12 @@ type EventRecords struct {
 	Recovery_RecoveryRemoved   []EventRecoveryRemoved          `test-gen-skip:"true"`
 	Recovery_RecoveryVouched   []EventRecoveryVouched          `test-gen-skip:"true"`
 
+	// NOT included into Cere runtime
 	Registrar_Registered   []EventRegistrarRegistered   `test-gen-skip:"true"`
 	Registrar_Deregistered []EventRegistrarDeregistered `test-gen-skip:"true"`
 	Registrar_Reserved     []EventRegistrarReserved     `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	Referenda_Submitted               []EventReferendaSubmitted               `test-gen-skip:"true"`
 	Referenda_DecisionDepositPlaced   []EventReferendaDecisionDepositPlaced   `test-gen-skip:"true"`
 	Referenda_DecisionDepositRefunded []EventReferendaDecisionDepositRefunded `test-gen-skip:"true"`
@@ -316,17 +347,22 @@ type EventRecords struct {
 	Referenda_TimedOut                []EventReferendaTimedOut                `test-gen-skip:"true"`
 	Referenda_Cancelled               []EventReferendaCancelled               `test-gen-skip:"true"`
 	Referenda_Killed                  []EventReferendaKilled                  `test-gen-skip:"true"`
+	// todo: add 'SubmissionDepositRefunded', 'MetadataSet', 'MetadataCleared'
 
-	Scheduler_CallLookupFailed []EventSchedulerCallLookupFailed `test-gen-blockchain:"polkadot"`
-	Scheduler_Canceled         []EventSchedulerCanceled         `test-gen-blockchain:"polkadot"`
-	Scheduler_Dispatched       []EventSchedulerDispatched       `test-gen-blockchain:"polkadot"`
-	Scheduler_Scheduled        []EventSchedulerScheduled        `test-gen-blockchain:"polkadot"`
+	// Included into Cere runtime
+	Scheduler_Canceled   []EventSchedulerCanceled   `test-gen-blockchain:"polkadot"`
+	Scheduler_Dispatched []EventSchedulerDispatched `test-gen-blockchain:"polkadot"`
+	Scheduler_Scheduled  []EventSchedulerScheduled  `test-gen-blockchain:"polkadot"`
+	// todo: add 'CallUnavailable', 'PeriodicFailed', 'PermanentlyOverweight'
 
+	// Included into Cere runtime
 	Session_NewSession []EventSessionNewSession `test-gen-blockchain:"centrifuge-parachain"`
 
+	// NOT included into Cere runtime
 	Slots_NewLeasePeriod []EventSlotsNewLeasePeriod `test-gen-blockchain:"polkadot"`
 	Slots_Leased         []EventSlotsLeased         `test-gen-blockchain:"polkadot"`
 
+	// Included into Cere runtime
 	Society_AutoUnbid                []EventSocietyAutoUnbid                `test-gen-skip:"true"`
 	Society_Bid                      []EventSocietyBid                      `test-gen-skip:"true"`
 	Society_CandidateSuspended       []EventSocietyCandidateSuspended       `test-gen-skip:"true"`
@@ -336,14 +372,15 @@ type EventRecords struct {
 	Society_Founded                  []EventSocietyFounded                  `test-gen-skip:"true"`
 	Society_Inducted                 []EventSocietyInducted                 `test-gen-skip:"true"`
 	Society_MemberSuspended          []EventSocietyMemberSuspended          `test-gen-skip:"true"`
-	Society_NewMaxMembers            []EventSocietyNewMaxMembers            `test-gen-skip:"true"`
 	Society_SuspendedMemberJudgement []EventSocietySuspendedMemberJudgement `test-gen-skip:"true"`
 	Society_Unbid                    []EventSocietyUnbid                    `test-gen-skip:"true"`
 	Society_Unfounded                []EventSocietyUnfounded                `test-gen-skip:"true"`
 	Society_Unvouch                  []EventSocietyUnvouch                  `test-gen-skip:"true"`
 	Society_Vote                     []EventSocietyVote                     `test-gen-skip:"true"`
 	Society_Vouch                    []EventSocietyVouch                    `test-gen-skip:"true"`
+	// todo: add 'NewParams'
 
+	// Included into Cere runtime
 	Staking_Bonded                     []EventStakingBonded                     `test-gen-blockchain:"polkadot"`
 	Staking_Chilled                    []EventStakingChilled                    `test-gen-blockchain:"polkadot"`
 	Staking_EraPaid                    []EventStakingEraPaid                    `test-gen-blockchain:"polkadot"`
@@ -357,16 +394,20 @@ type EventRecords struct {
 	Staking_ValidatorPrefsSet          []EventStakingValidatorPrefsSet          `test-gen-blockchain:"polkadot"`
 	Staking_Unbonded                   []EventStakingUnbonded                   `test-gen-blockchain:"polkadot"`
 	Staking_Withdrawn                  []EventStakingWithdrawn                  `test-gen-blockchain:"polkadot"`
+	// todo: add 'SlashReported', 'ForceEra'
 
+	// NOT included into Cere runtime
 	StateTrieMigration_Migrated              []EventStateTrieMigrationMigrated              `test-gen-skip:"true"`
 	StateTrieMigration_Slashed               []EventStateTrieMigrationSlashed               `test-gen-skip:"true"`
 	StateTrieMigration_AutoMigrationFinished []EventStateTrieMigrationAutoMigrationFinished `test-gen-skip:"true"`
 	StateTrieMigration_Halted                []EventStateTrieMigrationHalted                `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	Sudo_KeyChanged []EventSudoKeyChanged `test-gen-skip:"true"`
 	Sudo_Sudid      []EventSudoSudid      `test-gen-skip:"true"`
 	Sudo_SudoAsDone []EventSudoAsDone     `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	System_CodeUpdated      []EventSystemCodeUpdated      `test-gen-blockchain:"centrifuge-parachain"`
 	System_ExtrinsicFailed  []EventSystemExtrinsicFailed  `test-gen-blockchain:"centrifuge-parachain"`
 	System_ExtrinsicSuccess []EventSystemExtrinsicSuccess `test-gen-blockchain:"centrifuge-parachain"`
@@ -374,6 +415,7 @@ type EventRecords struct {
 	System_NewAccount       []EventSystemNewAccount       `test-gen-blockchain:"centrifuge-parachain"`
 	System_Remarked         []EventSystemRemarked         `test-gen-blockchain:"centrifuge-parachain"`
 
+	// Included into Cere runtime
 	TechnicalCommittee_Approved       []EventTechnicalCommitteeApproved       `test-gen-blockchain:"polkadot"`
 	TechnicalCommittee_Closed         []EventTechnicalCommitteeClosed         `test-gen-blockchain:"polkadot"`
 	TechnicalCommittee_Disapproved    []EventTechnicalCommitteeDisapproved    `test-gen-blockchain:"polkadot"`
@@ -382,6 +424,7 @@ type EventRecords struct {
 	TechnicalCommittee_Proposed       []EventTechnicalCommitteeProposed       `test-gen-blockchain:"polkadot"`
 	TechnicalCommittee_Voted          []EventTechnicalCommitteeVoted          `test-gen-blockchain:"polkadot"`
 
+	// Included into Cere runtime
 	TechnicalMembership_Dummy          []EventTechnicalMembershipDummy          `test-gen-blockchain:"polkadot"`
 	TechnicalMembership_KeyChanged     []EventTechnicalMembershipKeyChanged     `test-gen-blockchain:"polkadot"`
 	TechnicalMembership_MemberAdded    []EventTechnicalMembershipMemberAdded    `test-gen-blockchain:"polkadot"`
@@ -389,18 +432,22 @@ type EventRecords struct {
 	TechnicalMembership_MembersReset   []EventTechnicalMembershipMembersReset   `test-gen-blockchain:"polkadot"`
 	TechnicalMembership_MembersSwapped []EventTechnicalMembershipMembersSwapped `test-gen-blockchain:"polkadot"`
 
+	// Included into Cere runtime
 	Tips_NewTip       []EventTipsNewTip       `test-gen-blockchain:"polkadot"`
 	Tips_TipClosed    []EventTipsTipClosed    `test-gen-blockchain:"polkadot"`
 	Tips_TipClosing   []EventTipsTipClosing   `test-gen-blockchain:"polkadot"`
 	Tips_TipRetracted []EventTipsTipRetracted `test-gen-blockchain:"polkadot"`
 	Tips_TipSlashed   []EventTipsTipSlashed   `test-gen-blockchain:"polkadot"`
 
+	// NOT included into Cere runtime
 	TransactionStorage_Stored       []EventTransactionStorageStored       `test-gen-skip:"true"`
 	TransactionStorage_Renewed      []EventTransactionStorageRenewed      `test-gen-skip:"true"`
 	TransactionStorage_ProofChecked []EventTransactionStorageProofChecked `test-gen-skip:"true"`
 
+	// Included into Cere runtime
 	TransactionPayment_TransactionFeePaid []EventTransactionPaymentTransactionFeePaid `test-gen-blockchain:"westend"`
 
+	// Included into Cere runtime
 	Treasury_Proposed        []EventTreasuryProposed        `test-gen-blockchain:"altair"`
 	Treasury_Spending        []EventTreasurySpending        `test-gen-blockchain:"altair"`
 	Treasury_Awarded         []EventTreasuryAwarded         `test-gen-blockchain:"altair"`
@@ -411,6 +458,7 @@ type EventRecords struct {
 	Treasury_SpendApproved   []EventTreasurySpendApproved   `test-gen-blockchain:"altair"`
 	Treasury_UpdatedInactive []EventTreasuryUpdatedInactive `test-gen-blockchain:"altair"`
 
+	// NOT included into Cere runtime
 	Uniques_ApprovalCancelled    []EventUniquesApprovalCancelled    `test-gen-blockchain:"altair"`
 	Uniques_ApprovedTransfer     []EventUniquesApprovedTransfer     `test-gen-blockchain:"altair"`
 	Uniques_AssetStatusChanged   []EventUniquesAssetStatusChanged   `test-gen-blockchain:"altair"`
@@ -434,6 +482,7 @@ type EventRecords struct {
 	Uniques_Thawed               []EventUniquesThawed               `test-gen-blockchain:"altair"`
 	Uniques_Transferred          []EventUniquesTransferred          `test-gen-blockchain:"altair"`
 
+	// NOT included into Cere runtime
 	Ump_InvalidFormat          []EventUMPInvalidFormat          `test-gen-blockchain:"polkadot"`
 	Ump_UnsupportedVersion     []EventUMPUnsupportedVersion     `test-gen-blockchain:"polkadot"`
 	Ump_ExecutedUpward         []EventUMPExecutedUpward         `test-gen-blockchain:"polkadot"`
@@ -444,19 +493,24 @@ type EventRecords struct {
 
 	Utility_BatchCompleted   []EventUtilityBatchCompleted   `test-gen-blockchain:"centrifuge-parachain"`
 	Utility_BatchInterrupted []EventUtilityBatchInterrupted `test-gen-blockchain:"centrifuge-parachain"`
-	Utility_DispatchedAs     []EventUtilityBatchInterrupted `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_DispatchedAs     []EventUtilityDispatchedAs     `test-gen-blockchain:"centrifuge-parachain"`
 	Utility_ItemCompleted    []EventUtilityItemCompleted    `test-gen-blockchain:"centrifuge-parachain"`
+	// todo: add 'BatchCompletedWithErrors', 'ItemFailed'
 
+	// Included into Cere runtime
 	Vesting_VestingCompleted []EventVestingVestingCompleted `test-gen-blockchain:"centrifuge-parachain"`
 	Vesting_VestingUpdated   []EventVestingVestingUpdated   `test-gen-blockchain:"centrifuge-parachain"`
 
+	// Included into Cere runtime
 	VoterList_Rebagged     []EventVoterListRebagged     `test-gen-blockchain:"polkadot"`
 	VoterList_ScoreUpdated []EventVoterListScoreUpdated `test-gen-blockchain:"polkadot"`
 
-	Whitelist_CallWhitelisted           []EventWhitelistCallWhitelisted        `test-gen-skip:"true"`
-	Whitelist_WhitelistedCallRemoved    []EventWhitelistWhitelistedCallRemoved `test-gen-skip:"true"`
-	Whitelist_WhitelistedCallDispatched []EventWhitelistWhitelistedCallRemoved `test-gen-skip:"true"`
+	// Included into Cere runtime
+	Whitelist_CallWhitelisted           []EventWhitelistCallWhitelisted           `test-gen-skip:"true"`
+	Whitelist_WhitelistedCallRemoved    []EventWhitelistWhitelistedCallRemoved    `test-gen-skip:"true"`
+	Whitelist_WhitelistedCallDispatched []EventWhitelistWhitelistedCallDispatched `test-gen-skip:"true"`
 
+	// NOT included into Cere runtime
 	XcmPallet_Attempted                 []EventXcmPalletAttempted                 `test-gen-blockchain:"polkadot"`
 	XcmPallet_Sent                      []EventXcmPalletSent                      `test-gen-blockchain:"polkadot"`
 	XcmPallet_UnexpectedResponse        []EventXcmPalletUnexpectedResponse        `test-gen-blockchain:"polkadot"`

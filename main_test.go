@@ -21,11 +21,11 @@ import (
 	"math/big"
 	"time"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/signature"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v9"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/signature"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types/codec"
 )
 
 func Example_simpleConnect() {
@@ -50,7 +50,6 @@ func Example_simpleConnect() {
 	}
 
 	fmt.Printf("You are connected to chain %v using %v v%v\n", chain, nodeName, nodeVersion)
-	// Output: You are connected to chain Development using Parity Polkadot v0.9.43-ba42b9ce51d
 }
 
 func Example_listenToNewBlocks() {
@@ -323,7 +322,7 @@ func Example_displaySystemEvents() {
 			}
 			for _, e := range events.Balances_BalanceSet {
 				fmt.Printf("\tBalances:BalanceSet:: (phase=%#v)\n", e.Phase)
-				fmt.Printf("\t\t%v, %v, %v\n", e.Who, e.Free, e.Reserved)
+				fmt.Printf("\t\t%v, %v\n", e.Who, e.Free)
 			}
 			for _, e := range events.Balances_Deposit {
 				fmt.Printf("\tBalances:Deposit:: (phase=%#v)\n", e.Phase)

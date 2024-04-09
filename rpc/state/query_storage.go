@@ -17,8 +17,8 @@
 package state
 
 import (
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types"
 )
 
 // QueryStorage queries historical storage entries (by key) starting from a start block until an end block

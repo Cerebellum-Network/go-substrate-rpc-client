@@ -20,8 +20,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/client"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/client"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/config"
 )
 
 var testChain Chain

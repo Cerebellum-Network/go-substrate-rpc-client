@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
 
 // OptionI8 is a structure that can store a I8 or a missing value
 type OptionI8 struct {

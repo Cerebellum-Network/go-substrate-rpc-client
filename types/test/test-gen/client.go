@@ -26,11 +26,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types/codec"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types/codec"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v9"
 )
 
 type ClientOpts struct {

@@ -1,6 +1,6 @@
 package registry
 
-import libErr "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/error"
+import libErr "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/error"
 
 const (
 	ErrRecursiveDecodersResolving            = libErr.Error("recursive decoders resolving")

@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"testing"
 
-	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v8"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/config"
+	gsrpc "github.com/Cerebellum-Network/go-substrate-rpc-client/v9"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/config"
 	"github.com/stretchr/testify/assert"
 )
 

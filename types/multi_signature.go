@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
+import "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
 
 // MultiSignature
 type MultiSignature struct {

@@ -6,9 +6,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/registry"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/scale"
-	"github.com/Cerebellum-Network/go-substrate-rpc-client/v8/types"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/registry"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
+	"github.com/Cerebellum-Network/go-substrate-rpc-client/v9/types"
 	"github.com/stretchr/testify/assert"
 )
 
