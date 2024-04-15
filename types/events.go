@@ -117,6 +117,91 @@ type EventBalancesSlashed struct {
 	Topics  []Hash
 }
 
+// EventBalancesMinted is emitted when some amount was minted into an account.
+type EventBalancesMinted struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesBurned is emitted when some amount was burned from an account.
+type EventBalancesBurned struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesSuspended is emitted when some amount was suspended from an account (it can be restored later).
+type EventBalancesSuspended struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesRestored is emitted when some amount was restored into an account.
+type EventBalancesRestored struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesUpgraded is emitted when an account was upgraded.
+type EventBalancesUpgraded struct {
+	Phase  Phase
+	Who    AccountID
+	Topics []Hash
+}
+
+// EventBalancesIssued is emitted when total issuance was increased by `amount`, creating a credit to be balanced.
+type EventBalancesIssued struct {
+	Phase   Phase
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesRescinded is emitted when total issuance was decreased by `amount`, creating a debt to be balanced.
+type EventBalancesRescinded struct {
+	Phase   Phase
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesLocked is emitted when some balance was locked.
+type EventBalancesLocked struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesUnlocked is emitted when some some balance was unlocked.
+type EventBalancesUnlocked struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesFrozen is emitted when some balance was frozen.
+type EventBalancesFrozen struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesThawed is emitted when some balance was thawed.
+type EventBalancesThawed struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
 // EventGrandpaNewAuthorities is emitted when a new authority set has been applied
 type EventGrandpaNewAuthorities struct {
 	Phase          Phase
@@ -1225,6 +1310,14 @@ type EventBagsListRebagged struct {
 	From   U64
 	To     U64
 	Topics []Hash
+}
+
+// EventBagsListScoreUpdated is emitted when the score of an account is updated to the given amount.
+type EventBagsListScoreUpdated struct {
+	Phase    Phase
+	Who      AccountID
+	NewScore U64
+	Topics   []Hash
 }
 
 // EventDemocracyProposed is emitted when a motion has been proposed by a public account.

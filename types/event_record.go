@@ -93,8 +93,8 @@ type EventRecords struct {
 	Assets_AssetStatusChanged  []EventAssetAssetStatusChanged  `test-gen-skip:"true"`
 
 	// Included into Cere runtime
-	BagsList_Rebagged []EventBagsListRebagged `test-gen-blockchain:"polkadot"`
-	// todo: add 'ScoreUpdated'
+	BagsList_Rebagged     []EventBagsListRebagged     `test-gen-blockchain:"polkadot"`
+	BagsList_ScoreUpdated []EventBagsListScoreUpdated `test-gen-blockchain:"polkadot"`
 
 	// Included into Cere runtime
 	Balances_BalanceSet         []EventBalancesBalanceSet         `test-gen-blockchain:"centrifuge-parachain"`
@@ -107,7 +107,17 @@ type EventRecords struct {
 	Balances_Transfer           []EventBalancesTransfer           `test-gen-blockchain:"centrifuge-parachain"`
 	Balances_Unreserved         []EventBalancesUnreserved         `test-gen-blockchain:"centrifuge-parachain"`
 	Balances_Withdraw           []EventBalancesWithdraw           `test-gen-blockchain:"centrifuge-parachain"`
-	// todo: add 'Minted', 'Burned', 'Suspended', 'Restored', 'Upgraded', 'Issued', 'Rescinded', 'Locked', 'Unlocked', 'Thawed'
+	Balances_Minted             []EventBalancesMinted             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Burned             []EventBalancesBurned             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Suspended          []EventBalancesSuspended          `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Restored           []EventBalancesRestored           `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Upgraded           []EventBalancesUpgraded           `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Issued             []EventBalancesIssued             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Rescinded          []EventBalancesRescinded          `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Locked             []EventBalancesLocked             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Unlocked           []EventBalancesUnlocked           `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Frozen             []EventBalancesFrozen             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Thawed             []EventBalancesThawed             `test-gen-blockchain:"centrifuge-parachain"`
 
 	// Included into Cere runtime
 	Bounties_BountyProposed     []EventBountiesBountyProposed     `test-gen-blockchain:"polkadot"`
