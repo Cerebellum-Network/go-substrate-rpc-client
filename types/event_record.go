@@ -404,7 +404,8 @@ type EventRecords struct {
 	Staking_ValidatorPrefsSet          []EventStakingValidatorPrefsSet          `test-gen-blockchain:"polkadot"`
 	Staking_Unbonded                   []EventStakingUnbonded                   `test-gen-blockchain:"polkadot"`
 	Staking_Withdrawn                  []EventStakingWithdrawn                  `test-gen-blockchain:"polkadot"`
-	// todo: add 'SlashReported', 'ForceEra'
+	Staking_SlashReported              []EventStakingSlashReported              `test-gen-blockchain:"polkadot"`
+	Staking_ForceEra                   []EventStakingForceEra                   `test-gen-blockchain:"polkadot"`
 
 	// NOT included into Cere runtime
 	StateTrieMigration_Migrated              []EventStateTrieMigrationMigrated              `test-gen-skip:"true"`

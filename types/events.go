@@ -891,6 +891,23 @@ type EventStakingWithdrawn struct {
 	Topics []Hash
 }
 
+// A slash for the given validator, for the given percentage of their stake, at the given
+// era as been reported.
+type EventStakingSlashReported struct {
+	Phase     Phase
+	Validator AccountID
+	Fraction  U32
+	EraIndex  U32
+	Topics    []Hash
+}
+
+// A new force era mode was set.
+type EventStakingForceEra struct {
+	Phase  Phase
+	Mode   EraForcing
+	Topics []Hash
+}
+
 // EventStateTrieMigrationMigrated is emitted when the given number of `(top, child)` keys were migrated respectively,
 // with the given `compute`.
 type EventStateTrieMigrationMigrated struct {
@@ -1344,6 +1361,8 @@ type EventDemocracyExternalTabled struct {
 
 // VoteThreshold is a means of determining if a vote is past pass threshold.
 type VoteThreshold byte
+
+type EraForcing byte
 
 const (
 	// SuperMajorityApprove require super majority of approvals is needed to pass this vote.
