@@ -2369,6 +2369,31 @@ type EventReferendaKilled struct {
 	Topics []Hash
 }
 
+// EventReferendaSubmissionDepositRefunded is emitted when a submission deposit has been refunded.
+type EventReferendaSubmissionDepositRefunded struct {
+	Phase  Phase
+	Index  U32
+	Who    AccountID
+	Amount U128
+	Topics []Hash
+}
+
+// EventReferendaMetadataSet is emitted when metadata for a referendum has been set.
+type EventReferendaMetadataSet struct {
+	Phase  Phase
+	Index  U32
+	Hash   H256
+	Topics []Hash
+}
+
+// EventReferendaMetadataCleared is emitted when metadata for a referendum has been cleared.
+type EventReferendaMetadataCleared struct {
+	Phase  Phase
+	Index  U32
+	Hash   H256
+	Topics []Hash
+}
+
 // EventRecoveryClosed is emitted when a recovery process for account_1 by account_2 has been closed
 type EventRecoveryClosed struct {
 	Phase   Phase

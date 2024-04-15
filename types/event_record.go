@@ -344,20 +344,22 @@ type EventRecords struct {
 	Registrar_Reserved     []EventRegistrarReserved     `test-gen-skip:"true"`
 
 	// Included into Cere runtime
-	Referenda_Submitted               []EventReferendaSubmitted               `test-gen-skip:"true"`
-	Referenda_DecisionDepositPlaced   []EventReferendaDecisionDepositPlaced   `test-gen-skip:"true"`
-	Referenda_DecisionDepositRefunded []EventReferendaDecisionDepositRefunded `test-gen-skip:"true"`
-	Referenda_DepositSlashed          []EventReferendaDecisionSlashed         `test-gen-skip:"true"`
-	Referenda_DecisionStarted         []EventReferendaDecisionStarted         `test-gen-skip:"true"`
-	Referenda_ConfirmStarted          []EventReferendaConfirmStarted          `test-gen-skip:"true"`
-	Referenda_ConfirmAborted          []EventReferendaConfirmAborted          `test-gen-skip:"true"`
-	Referenda_Confirmed               []EventReferendaConfirmed               `test-gen-skip:"true"`
-	Referenda_Approved                []EventReferendaApproved                `test-gen-skip:"true"`
-	Referenda_Rejected                []EventReferendaRejected                `test-gen-skip:"true"`
-	Referenda_TimedOut                []EventReferendaTimedOut                `test-gen-skip:"true"`
-	Referenda_Cancelled               []EventReferendaCancelled               `test-gen-skip:"true"`
-	Referenda_Killed                  []EventReferendaKilled                  `test-gen-skip:"true"`
-	// todo: add 'SubmissionDepositRefunded', 'MetadataSet', 'MetadataCleared'
+	Referenda_Submitted                 []EventReferendaSubmitted                 `test-gen-skip:"true"`
+	Referenda_DecisionDepositPlaced     []EventReferendaDecisionDepositPlaced     `test-gen-skip:"true"`
+	Referenda_DecisionDepositRefunded   []EventReferendaDecisionDepositRefunded   `test-gen-skip:"true"`
+	Referenda_DepositSlashed            []EventReferendaDecisionSlashed           `test-gen-skip:"true"`
+	Referenda_DecisionStarted           []EventReferendaDecisionStarted           `test-gen-skip:"true"`
+	Referenda_ConfirmStarted            []EventReferendaConfirmStarted            `test-gen-skip:"true"`
+	Referenda_ConfirmAborted            []EventReferendaConfirmAborted            `test-gen-skip:"true"`
+	Referenda_Confirmed                 []EventReferendaConfirmed                 `test-gen-skip:"true"`
+	Referenda_Approved                  []EventReferendaApproved                  `test-gen-skip:"true"`
+	Referenda_Rejected                  []EventReferendaRejected                  `test-gen-skip:"true"`
+	Referenda_TimedOut                  []EventReferendaTimedOut                  `test-gen-skip:"true"`
+	Referenda_Cancelled                 []EventReferendaCancelled                 `test-gen-skip:"true"`
+	Referenda_Killed                    []EventReferendaKilled                    `test-gen-skip:"true"`
+	Referenda_SubmissionDepositRefunded []EventReferendaSubmissionDepositRefunded `test-gen-skip:"true"`
+	Referenda_MetadataSet               []EventReferendaMetadataSet               `test-gen-skip:"true"`
+	Referenda_MetadataCleared           []EventReferendaMetadataCleared           `test-gen-skip:"true"`
 
 	// Included into Cere runtime
 	Scheduler_Canceled   []EventSchedulerCanceled   `test-gen-blockchain:"polkadot"`
