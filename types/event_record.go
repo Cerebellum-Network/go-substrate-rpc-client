@@ -502,11 +502,12 @@ type EventRecords struct {
 	Ump_OverweightEnqueued     []EventUMPOverweightEnqueued     `test-gen-blockchain:"polkadot"`
 	Ump_OverweightServiced     []EventUMPOverweightServiced     `test-gen-blockchain:"polkadot"`
 
-	Utility_BatchCompleted   []EventUtilityBatchCompleted   `test-gen-blockchain:"centrifuge-parachain"`
-	Utility_BatchInterrupted []EventUtilityBatchInterrupted `test-gen-blockchain:"centrifuge-parachain"`
-	Utility_DispatchedAs     []EventUtilityDispatchedAs     `test-gen-blockchain:"centrifuge-parachain"`
-	Utility_ItemCompleted    []EventUtilityItemCompleted    `test-gen-blockchain:"centrifuge-parachain"`
-	// todo: add 'BatchCompletedWithErrors', 'ItemFailed'
+	Utility_BatchCompleted           []EventUtilityBatchCompleted           `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_BatchInterrupted         []EventUtilityBatchInterrupted         `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_DispatchedAs             []EventUtilityDispatchedAs             `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_ItemCompleted            []EventUtilityItemCompleted            `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_BatchCompletedWithErrors []EventUtilityBatchCompletedWithErrors `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_ItemFailed               []EventUtilityItemFailed               `test-gen-blockchain:"centrifuge-parachain"`
 
 	// Included into Cere runtime
 	Vesting_VestingCompleted []EventVestingVestingCompleted `test-gen-blockchain:"centrifuge-parachain"`

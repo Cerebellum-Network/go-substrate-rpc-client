@@ -54,6 +54,12 @@ type TokenError struct {
 	IsFrozen bool
 
 	IsUnsupported bool
+
+	IsCannotCreateHold bool
+
+	IsNotExpendable bool
+
+	IsBlocked bool
 }
 
 func (t *TokenError) Decode(decoder scale.Decoder) error {
@@ -205,6 +211,14 @@ type DispatchError struct {
 
 	IsTransactional    bool
 	TransactionalError TransactionalError
+
+	IsExhausted bool
+
+	IsCorruption bool
+
+	IsUnavailable bool
+
+	IsRootNotAllowed bool
 }
 
 func (d *DispatchError) Decode(decoder scale.Decoder) error {

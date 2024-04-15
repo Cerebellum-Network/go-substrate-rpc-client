@@ -3362,6 +3362,19 @@ type EventUtilityItemCompleted struct {
 	Topics []Hash
 }
 
+// EventUtilityBatchCompletedWithErrors is emitted when a batch of dispatches completed but has errors.
+type EventUtilityBatchCompletedWithErrors struct {
+	Phase  Phase
+	Topics []Hash
+}
+
+// EventUtilityItemFailed is emitted when a single item within a Batch of dispatches has completed with error.
+type EventUtilityItemFailed struct {
+	Phase  Phase
+	Error  DispatchError
+	Topics []Hash
+}
+
 // EventUtilityNewMultisig is emitted when a new multisig operation has begun.
 // First param is the account that is approving, second is the multisig account, third is hash of the call.
 type EventMultisigNewMultisig struct {
