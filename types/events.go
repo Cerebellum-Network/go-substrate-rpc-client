@@ -117,6 +117,91 @@ type EventBalancesSlashed struct {
 	Topics  []Hash
 }
 
+// EventBalancesMinted is emitted when some amount was minted into an account.
+type EventBalancesMinted struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesBurned is emitted when some amount was burned from an account.
+type EventBalancesBurned struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesSuspended is emitted when some amount was suspended from an account (it can be restored later).
+type EventBalancesSuspended struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesRestored is emitted when some amount was restored into an account.
+type EventBalancesRestored struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesUpgraded is emitted when an account was upgraded.
+type EventBalancesUpgraded struct {
+	Phase  Phase
+	Who    AccountID
+	Topics []Hash
+}
+
+// EventBalancesIssued is emitted when total issuance was increased by `amount`, creating a credit to be balanced.
+type EventBalancesIssued struct {
+	Phase   Phase
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesRescinded is emitted when total issuance was decreased by `amount`, creating a debt to be balanced.
+type EventBalancesRescinded struct {
+	Phase   Phase
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesLocked is emitted when some balance was locked.
+type EventBalancesLocked struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesUnlocked is emitted when some some balance was unlocked.
+type EventBalancesUnlocked struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesFrozen is emitted when some balance was frozen.
+type EventBalancesFrozen struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesThawed is emitted when some balance was thawed.
+type EventBalancesThawed struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
 // EventGrandpaNewAuthorities is emitted when a new authority set has been applied
 type EventGrandpaNewAuthorities struct {
 	Phase          Phase
@@ -806,6 +891,23 @@ type EventStakingWithdrawn struct {
 	Topics []Hash
 }
 
+// A slash for the given validator, for the given percentage of their stake, at the given
+// era as been reported.
+type EventStakingSlashReported struct {
+	Phase     Phase
+	Validator AccountID
+	Fraction  U32
+	EraIndex  U32
+	Topics    []Hash
+}
+
+// A new force era mode was set.
+type EventStakingForceEra struct {
+	Phase  Phase
+	Mode   EraForcing
+	Topics []Hash
+}
+
 // EventStateTrieMigrationMigrated is emitted when the given number of `(top, child)` keys were migrated respectively,
 // with the given `compute`.
 type EventStateTrieMigrationMigrated struct {
@@ -1227,6 +1329,14 @@ type EventBagsListRebagged struct {
 	Topics []Hash
 }
 
+// EventBagsListScoreUpdated is emitted when the score of an account is updated to the given amount.
+type EventBagsListScoreUpdated struct {
+	Phase    Phase
+	Who      AccountID
+	NewScore U64
+	Topics   []Hash
+}
+
 // EventDemocracyProposed is emitted when a motion has been proposed by a public account.
 type EventDemocracyProposed struct {
 	Phase         Phase
@@ -1251,6 +1361,8 @@ type EventDemocracyExternalTabled struct {
 
 // VoteThreshold is a means of determining if a vote is past pass threshold.
 type VoteThreshold byte
+
+type EraForcing byte
 
 const (
 	// SuperMajorityApprove require super majority of approvals is needed to pass this vote.
@@ -2257,6 +2369,31 @@ type EventReferendaKilled struct {
 	Topics []Hash
 }
 
+// EventReferendaSubmissionDepositRefunded is emitted when a submission deposit has been refunded.
+type EventReferendaSubmissionDepositRefunded struct {
+	Phase  Phase
+	Index  U32
+	Who    AccountID
+	Amount U128
+	Topics []Hash
+}
+
+// EventReferendaMetadataSet is emitted when metadata for a referendum has been set.
+type EventReferendaMetadataSet struct {
+	Phase  Phase
+	Index  U32
+	Hash   H256
+	Topics []Hash
+}
+
+// EventReferendaMetadataCleared is emitted when metadata for a referendum has been cleared.
+type EventReferendaMetadataCleared struct {
+	Phase  Phase
+	Index  U32
+	Hash   H256
+	Topics []Hash
+}
+
 // EventRecoveryClosed is emitted when a recovery process for account_1 by account_2 has been closed
 type EventRecoveryClosed struct {
 	Phase   Phase
@@ -3247,6 +3384,19 @@ type EventUtilityDispatchedAs struct {
 // EventUtilityItemCompleted is emitted when a single item within a Batch of dispatches has completed with no error
 type EventUtilityItemCompleted struct {
 	Phase  Phase
+	Topics []Hash
+}
+
+// EventUtilityBatchCompletedWithErrors is emitted when a batch of dispatches completed but has errors.
+type EventUtilityBatchCompletedWithErrors struct {
+	Phase  Phase
+	Topics []Hash
+}
+
+// EventUtilityItemFailed is emitted when a single item within a Batch of dispatches has completed with error.
+type EventUtilityItemFailed struct {
+	Phase  Phase
+	Error  DispatchError
 	Topics []Hash
 }
 

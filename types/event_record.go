@@ -93,8 +93,8 @@ type EventRecords struct {
 	Assets_AssetStatusChanged  []EventAssetAssetStatusChanged  `test-gen-skip:"true"`
 
 	// Included into Cere runtime
-	BagsList_Rebagged []EventBagsListRebagged `test-gen-blockchain:"polkadot"`
-	// todo: add 'ScoreUpdated'
+	BagsList_Rebagged     []EventBagsListRebagged     `test-gen-blockchain:"polkadot"`
+	BagsList_ScoreUpdated []EventBagsListScoreUpdated `test-gen-blockchain:"polkadot"`
 
 	// Included into Cere runtime
 	Balances_BalanceSet         []EventBalancesBalanceSet         `test-gen-blockchain:"centrifuge-parachain"`
@@ -107,7 +107,17 @@ type EventRecords struct {
 	Balances_Transfer           []EventBalancesTransfer           `test-gen-blockchain:"centrifuge-parachain"`
 	Balances_Unreserved         []EventBalancesUnreserved         `test-gen-blockchain:"centrifuge-parachain"`
 	Balances_Withdraw           []EventBalancesWithdraw           `test-gen-blockchain:"centrifuge-parachain"`
-	// todo: add 'Minted', 'Burned', 'Suspended', 'Restored', 'Upgraded', 'Issued', 'Rescinded', 'Locked', 'Unlocked', 'Thawed'
+	Balances_Minted             []EventBalancesMinted             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Burned             []EventBalancesBurned             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Suspended          []EventBalancesSuspended          `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Restored           []EventBalancesRestored           `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Upgraded           []EventBalancesUpgraded           `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Issued             []EventBalancesIssued             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Rescinded          []EventBalancesRescinded          `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Locked             []EventBalancesLocked             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Unlocked           []EventBalancesUnlocked           `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Frozen             []EventBalancesFrozen             `test-gen-blockchain:"centrifuge-parachain"`
+	Balances_Thawed             []EventBalancesThawed             `test-gen-blockchain:"centrifuge-parachain"`
 
 	// Included into Cere runtime
 	Bounties_BountyProposed     []EventBountiesBountyProposed     `test-gen-blockchain:"polkadot"`
@@ -334,20 +344,22 @@ type EventRecords struct {
 	Registrar_Reserved     []EventRegistrarReserved     `test-gen-skip:"true"`
 
 	// Included into Cere runtime
-	Referenda_Submitted               []EventReferendaSubmitted               `test-gen-skip:"true"`
-	Referenda_DecisionDepositPlaced   []EventReferendaDecisionDepositPlaced   `test-gen-skip:"true"`
-	Referenda_DecisionDepositRefunded []EventReferendaDecisionDepositRefunded `test-gen-skip:"true"`
-	Referenda_DepositSlashed          []EventReferendaDecisionSlashed         `test-gen-skip:"true"`
-	Referenda_DecisionStarted         []EventReferendaDecisionStarted         `test-gen-skip:"true"`
-	Referenda_ConfirmStarted          []EventReferendaConfirmStarted          `test-gen-skip:"true"`
-	Referenda_ConfirmAborted          []EventReferendaConfirmAborted          `test-gen-skip:"true"`
-	Referenda_Confirmed               []EventReferendaConfirmed               `test-gen-skip:"true"`
-	Referenda_Approved                []EventReferendaApproved                `test-gen-skip:"true"`
-	Referenda_Rejected                []EventReferendaRejected                `test-gen-skip:"true"`
-	Referenda_TimedOut                []EventReferendaTimedOut                `test-gen-skip:"true"`
-	Referenda_Cancelled               []EventReferendaCancelled               `test-gen-skip:"true"`
-	Referenda_Killed                  []EventReferendaKilled                  `test-gen-skip:"true"`
-	// todo: add 'SubmissionDepositRefunded', 'MetadataSet', 'MetadataCleared'
+	Referenda_Submitted                 []EventReferendaSubmitted                 `test-gen-skip:"true"`
+	Referenda_DecisionDepositPlaced     []EventReferendaDecisionDepositPlaced     `test-gen-skip:"true"`
+	Referenda_DecisionDepositRefunded   []EventReferendaDecisionDepositRefunded   `test-gen-skip:"true"`
+	Referenda_DepositSlashed            []EventReferendaDecisionSlashed           `test-gen-skip:"true"`
+	Referenda_DecisionStarted           []EventReferendaDecisionStarted           `test-gen-skip:"true"`
+	Referenda_ConfirmStarted            []EventReferendaConfirmStarted            `test-gen-skip:"true"`
+	Referenda_ConfirmAborted            []EventReferendaConfirmAborted            `test-gen-skip:"true"`
+	Referenda_Confirmed                 []EventReferendaConfirmed                 `test-gen-skip:"true"`
+	Referenda_Approved                  []EventReferendaApproved                  `test-gen-skip:"true"`
+	Referenda_Rejected                  []EventReferendaRejected                  `test-gen-skip:"true"`
+	Referenda_TimedOut                  []EventReferendaTimedOut                  `test-gen-skip:"true"`
+	Referenda_Cancelled                 []EventReferendaCancelled                 `test-gen-skip:"true"`
+	Referenda_Killed                    []EventReferendaKilled                    `test-gen-skip:"true"`
+	Referenda_SubmissionDepositRefunded []EventReferendaSubmissionDepositRefunded `test-gen-skip:"true"`
+	Referenda_MetadataSet               []EventReferendaMetadataSet               `test-gen-skip:"true"`
+	Referenda_MetadataCleared           []EventReferendaMetadataCleared           `test-gen-skip:"true"`
 
 	// Included into Cere runtime
 	Scheduler_Canceled   []EventSchedulerCanceled   `test-gen-blockchain:"polkadot"`
@@ -394,7 +406,8 @@ type EventRecords struct {
 	Staking_ValidatorPrefsSet          []EventStakingValidatorPrefsSet          `test-gen-blockchain:"polkadot"`
 	Staking_Unbonded                   []EventStakingUnbonded                   `test-gen-blockchain:"polkadot"`
 	Staking_Withdrawn                  []EventStakingWithdrawn                  `test-gen-blockchain:"polkadot"`
-	// todo: add 'SlashReported', 'ForceEra'
+	Staking_SlashReported              []EventStakingSlashReported              `test-gen-blockchain:"polkadot"`
+	Staking_ForceEra                   []EventStakingForceEra                   `test-gen-blockchain:"polkadot"`
 
 	// NOT included into Cere runtime
 	StateTrieMigration_Migrated              []EventStateTrieMigrationMigrated              `test-gen-skip:"true"`
@@ -491,11 +504,12 @@ type EventRecords struct {
 	Ump_OverweightEnqueued     []EventUMPOverweightEnqueued     `test-gen-blockchain:"polkadot"`
 	Ump_OverweightServiced     []EventUMPOverweightServiced     `test-gen-blockchain:"polkadot"`
 
-	Utility_BatchCompleted   []EventUtilityBatchCompleted   `test-gen-blockchain:"centrifuge-parachain"`
-	Utility_BatchInterrupted []EventUtilityBatchInterrupted `test-gen-blockchain:"centrifuge-parachain"`
-	Utility_DispatchedAs     []EventUtilityDispatchedAs     `test-gen-blockchain:"centrifuge-parachain"`
-	Utility_ItemCompleted    []EventUtilityItemCompleted    `test-gen-blockchain:"centrifuge-parachain"`
-	// todo: add 'BatchCompletedWithErrors', 'ItemFailed'
+	Utility_BatchCompleted           []EventUtilityBatchCompleted           `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_BatchInterrupted         []EventUtilityBatchInterrupted         `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_DispatchedAs             []EventUtilityDispatchedAs             `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_ItemCompleted            []EventUtilityItemCompleted            `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_BatchCompletedWithErrors []EventUtilityBatchCompletedWithErrors `test-gen-blockchain:"centrifuge-parachain"`
+	Utility_ItemFailed               []EventUtilityItemFailed               `test-gen-blockchain:"centrifuge-parachain"`
 
 	// Included into Cere runtime
 	Vesting_VestingCompleted []EventVestingVestingCompleted `test-gen-blockchain:"centrifuge-parachain"`
