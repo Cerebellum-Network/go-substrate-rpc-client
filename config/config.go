@@ -35,7 +35,7 @@ func Default() Config {
 	return Config{
 		RPCURL:           extractDefaultRPCURL(),
 		DialTimeout:      10 * time.Second,
-		SubscribeTimeout: 5 * time.Second,
+		SubscribeTimeout: 15 * time.Second, // block time in the Substrate is 6 seconds, the timeout should be more than 6 seconds to guarantee a session will not be closed earlier than an extrinsic will be included to a block
 	}
 }
 
