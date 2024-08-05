@@ -347,7 +347,7 @@ type EventRecords struct {
 	Referenda_Submitted                 []EventReferendaSubmitted                 `test-gen-skip:"true"`
 	Referenda_DecisionDepositPlaced     []EventReferendaDecisionDepositPlaced     `test-gen-skip:"true"`
 	Referenda_DecisionDepositRefunded   []EventReferendaDecisionDepositRefunded   `test-gen-skip:"true"`
-	Referenda_DepositSlashed            []EventReferendaDecisionSlashed           `test-gen-skip:"true"`
+	Referenda_DepositSlashed            []EventReferendaDepositSlashed            `test-gen-skip:"true"`
 	Referenda_DecisionStarted           []EventReferendaDecisionStarted           `test-gen-skip:"true"`
 	Referenda_ConfirmStarted            []EventReferendaConfirmStarted            `test-gen-skip:"true"`
 	Referenda_ConfirmAborted            []EventReferendaConfirmAborted            `test-gen-skip:"true"`
@@ -362,10 +362,12 @@ type EventRecords struct {
 	Referenda_MetadataCleared           []EventReferendaMetadataCleared           `test-gen-skip:"true"`
 
 	// Included into Cere runtime
-	Scheduler_Canceled   []EventSchedulerCanceled   `test-gen-blockchain:"polkadot"`
-	Scheduler_Dispatched []EventSchedulerDispatched `test-gen-blockchain:"polkadot"`
-	Scheduler_Scheduled  []EventSchedulerScheduled  `test-gen-blockchain:"polkadot"`
-	// todo: add 'CallUnavailable', 'PeriodicFailed', 'PermanentlyOverweight'
+	Scheduler_Canceled              []EventSchedulerCanceled              `test-gen-blockchain:"polkadot"`
+	Scheduler_Dispatched            []EventSchedulerDispatched            `test-gen-blockchain:"polkadot"`
+	Scheduler_Scheduled             []EventSchedulerScheduled             `test-gen-blockchain:"polkadot"`
+	Scheduler_CallUnavailable       []EventSchedulerCallUnavailable       `test-gen-blockchain:"polkadot"`
+	Scheduler_PeriodicFailed        []EventSchedulerPeriodicFailed        `test-gen-blockchain:"polkadot"`
+	Scheduler_PermanentlyOverweight []EventSchedulerPermanentlyOverweight `test-gen-blockchain:"polkadot"`
 
 	// Included into Cere runtime
 	Session_NewSession []EventSessionNewSession `test-gen-blockchain:"centrifuge-parachain"`

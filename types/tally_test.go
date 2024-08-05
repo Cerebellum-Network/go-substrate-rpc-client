@@ -27,25 +27,26 @@ import (
 
 var (
 	testTally = Tally{
-		Votes: NewU128(*big.NewInt(123)),
-		Total: NewU128(*big.NewInt(456)),
+		Ayes:    NewU128(*big.NewInt(123)),
+		Nays:    NewU128(*big.NewInt(456)),
+		Support: NewU128(*big.NewInt(789)),
 	}
 )
 
 func TestTally_EncodeDecode(t *testing.T) {
 	AssertRoundTripFuzz[Tally](t, 100)
 	AssertDecodeNilData[Tally](t)
-	AssertEncodeEmptyObj[Tally](t, 32)
+	AssertEncodeEmptyObj[Tally](t, 48)
 }
 
 func TestTally_Encode(t *testing.T) {
 	AssertEncode(t, []EncodingAssert{
-		{testTally, MustHexDecodeString("0x7b000000000000000000000000000000c8010000000000000000000000000000")},
+		{testTally, MustHexDecodeString("0x7b000000000000000000000000000000c801000000000000000000000000000015030000000000000000000000000000")},
 	})
 }
 
 func TestTally_Decode(t *testing.T) {
 	AssertDecode(t, []DecodingAssert{
-		{MustHexDecodeString("0x7b000000000000000000000000000000c8010000000000000000000000000000"), testTally},
+		{MustHexDecodeString("0x7b000000000000000000000000000000c801000000000000000000000000000015030000000000000000000000000000"), testTally},
 	})
 }
