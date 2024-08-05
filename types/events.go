@@ -2267,7 +2267,7 @@ type EventRegistrarReserved struct {
 type EventReferendaSubmitted struct {
 	Phase        Phase
 	Index        U32
-	Track        U8
+	Track        U16
 	ProposalHash Hash
 	Topics       []Hash
 }
@@ -2291,7 +2291,7 @@ type EventReferendaDecisionDepositRefunded struct {
 }
 
 // EventReferendaDecisionSlashed is emitted when a deposit has been slashed.
-type EventReferendaDecisionSlashed struct {
+type EventReferendaDepositSlashed struct {
 	Phase  Phase
 	Who    AccountID
 	Amount U128
@@ -2302,7 +2302,7 @@ type EventReferendaDecisionSlashed struct {
 type EventReferendaDecisionStarted struct {
 	Phase        Phase
 	Index        U32
-	Track        U8
+	Track        U16
 	ProposalHash Hash
 	Tally        Tally
 	Topics       []Hash
@@ -2653,8 +2653,32 @@ type EventSchedulerCanceled struct {
 type EventSchedulerDispatched struct {
 	Phase  Phase
 	Task   TaskAddress
-	ID     OptionBytes
+	ID     OptionAccountID
 	Result DispatchResult
+	Topics []Hash
+}
+
+// EventSchedulerCallUnavailable is emitted when call for the provided hash was not found so the task has been aborted
+type EventSchedulerCallUnavailable struct {
+	Phase  Phase
+	Task   TaskAddress
+	ID     OptionAccountID
+	Topics []Hash
+}
+
+// EventSchedulerPeriodicFailed is emitted when given task was unable to be renewed since the agenda is full at that block
+type EventSchedulerPeriodicFailed struct {
+	Phase  Phase
+	Task   TaskAddress
+	ID     OptionAccountID
+	Topics []Hash
+}
+
+// EventSchedulerPermanentlyOverweight is emitted when given task can never be executed since it is overweight.
+type EventSchedulerPermanentlyOverweight struct {
+	Phase  Phase
+	Task   TaskAddress
+	ID     OptionAccountID
 	Topics []Hash
 }
 

@@ -19,17 +19,23 @@ package types
 import "github.com/Cerebellum-Network/go-substrate-rpc-client/v9/scale"
 
 type Tally struct {
-	Votes U128
-	Total U128
+	Ayes    U128
+	Nays    U128
+	Support U128
 }
 
 func (t *Tally) Decode(decoder scale.Decoder) error {
-	err := decoder.Decode(&t.Votes)
+	err := decoder.Decode(&t.Ayes)
 	if err != nil {
 		return err
 	}
 
-	err = decoder.Decode(&t.Total)
+	err = decoder.Decode(&t.Nays)
+	if err != nil {
+		return err
+	}
+
+	err = decoder.Decode(&t.Support)
 	if err != nil {
 		return err
 	}
@@ -38,12 +44,17 @@ func (t *Tally) Decode(decoder scale.Decoder) error {
 }
 
 func (t Tally) Encode(encoder scale.Encoder) error {
-	err := encoder.Encode(t.Votes)
+	err := encoder.Encode(t.Ayes)
 	if err != nil {
 		return err
 	}
 
-	err = encoder.Encode(t.Total)
+	err = encoder.Encode(t.Nays)
+	if err != nil {
+		return err
+	}
+
+	err = encoder.Encode(t.Support)
 	if err != nil {
 		return err
 	}
